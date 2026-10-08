@@ -3,8 +3,8 @@
 [takram-design-engineering/three-geospatial](https://github.com/takram-design-engineering/three-geospatial) (Three.js/R3F precomputed atmospheric scattering + volumetric clouds), with its Storybook re-centered on **Gerry Ranch** ("Jerry's Ranch"), 9015 Rosita Rd, Santa Rosa Valley / Camarillo, CA.
 
 - **Coordinates:** 34.2421°N, −118.9455°W (US Census geocoder, address match)
-- **Live Storybook (hosted artifact):** https://claude.ai/artifact/C1QnVrGQXfMrc6WZcTrgMu
-  (private to your Claude account until shared; GPU required — any laptop is fine. Hosted-copy quirks: binary textures ship base64-encoded with a small fetch shim because the artifact host only serves web media types, and the two HDRI-dependent stories — Sky/Environment Map, Effects/Lens Flare — are omitted-asset casualties, 25 MB file limit. Everything else, including the clouds, runs fully.)
+- **Live Storybook:** https://stuff.evanapplegate.com/takram-jerrys-ranch/storybook/
+  (static build committed under `storybook/`, served by this repo's GitHub Pages. Everything works except the film-LUT color-grading dropdowns — 350 MB of LUT pngs left out — and the Google-3D-Tiles stories, which prompt in-story for a Maps API key.)
 - To watch lighting change over time: open a story → `local date` panel → drag **timeOfDay** (local solar hours) or hit **animate**. `dayOfYear` sweeps the seasons; `location` panel moves you elsewhere.
 
 ## What changed (jerrys-ranch.patch)

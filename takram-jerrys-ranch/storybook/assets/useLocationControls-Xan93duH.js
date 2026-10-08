@@ -1,0 +1,1 @@
+import{u as d}from"./useControls-B4rxjebD.js";function r({longitude:e=-118.9455,latitude:u=34.2421,height:i=300,maxHeight:t=3e4}={},o){const{longitude:a,latitude:l,altitude:n}=d("location",{longitude:{value:e,min:-180,max:180},latitude:{value:u,min:-90,max:90},altitude:{value:i,min:0,max:t}},o,[t]);return{longitude:a,latitude:l,height:n}}export{r as u};

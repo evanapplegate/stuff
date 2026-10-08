@@ -1,0 +1,1 @@
+import{ae as k,aa as q}from"./iframe-BVnUeOdJ.js";const w=((A,a,l,u,b)=>{let y,C,x,o,f;typeof A=="string"?(C=A,y=a,Array.isArray(l)?f=l:l!=null&&("store"in l?(o=l,f=u):(x=l,Array.isArray(u)?f=u:(o=u,f=b)))):(y=A,Array.isArray(a)?f=a:(o=a,f=l));const $=k(),j=C!=null?[C,y??{},x??{},{store:$,...o},f]:[y??{},{store:$,...o},f];return q(...j)});export{w as u};
