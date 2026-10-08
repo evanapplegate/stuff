@@ -1,0 +1,353 @@
+diff --git a/storybook/src/atmosphere/3DTilesRenderer-Story.tsx b/storybook/src/atmosphere/3DTilesRenderer-Story.tsx
+index b3e18de..a943b74 100644
+--- a/storybook/src/atmosphere/3DTilesRenderer-Story.tsx
++++ b/storybook/src/atmosphere/3DTilesRenderer-Story.tsx
+@@ -48,8 +48,8 @@ interface SceneProps extends LocalDateControlsParams {
+ 
+ const Scene: FC<SceneProps> = ({
+   exposure = 10,
+-  longitude = 139.7671,
+-  latitude = 35.6812,
++  longitude = -118.9455,
++  latitude = 34.2421,
+   heading = 180,
+   pitch = -30,
+   distance = 4500,
+@@ -134,7 +134,11 @@ const Scene: FC<SceneProps> = ({
+   })
+ 
+   return (
+-    <Atmosphere ref={atmosphereRef} correctAltitude={correctAltitude}>
++    <Atmosphere
++      ref={atmosphereRef}
++      textures='atmosphere'
++      correctAltitude={correctAltitude}
++    >
+       <Sky />
+       <Stars data='atmosphere/stars.bin' />
+       <Globe>
+diff --git a/storybook/src/atmosphere/3DTilesRenderer.stories.tsx b/storybook/src/atmosphere/3DTilesRenderer.stories.tsx
+index 45de582..58c432b 100644
+--- a/storybook/src/atmosphere/3DTilesRenderer.stories.tsx
++++ b/storybook/src/atmosphere/3DTilesRenderer.stories.tsx
+@@ -9,6 +9,19 @@ export default {
+   }
+ } satisfies Meta
+ 
++export const JerrysRanch: StoryFn = () => (
++  <Story
++    longitude={-118.9455}
++    latitude={34.2421}
++    heading={-70}
++    pitch={-25}
++    distance={2500}
++    exposure={10}
++    dayOfYear={281}
++    timeOfDay={16.5}
++  />
++)
++
+ export const Manhattan: StoryFn = () => (
+   <Story
+     longitude={-73.9709}
+diff --git a/storybook/src/atmosphere/Atmosphere-Basic.tsx b/storybook/src/atmosphere/Atmosphere-Basic.tsx
+index 0d42e8e..2b87989 100644
+--- a/storybook/src/atmosphere/Atmosphere-Basic.tsx
++++ b/storybook/src/atmosphere/Atmosphere-Basic.tsx
+@@ -47,7 +47,7 @@ import { useToneMappingControls } from '../helpers/useToneMappingControls'
+ import { CesiumIonTerrainPlugin } from '../plugins/CesiumIonTerrainPlugin'
+ import { TileMeshPropsPlugin } from '../plugins/TileMeshPropsPlugin'
+ 
+-const geodetic = new Geodetic(radians(138.5), radians(36.2), 5000)
++const geodetic = new Geodetic(radians(-118.9455), radians(34.2421), 5000)
+ const position = geodetic.toECEF()
+ 
+ const terrainBasicMaterial = new MeshBasicMaterial({ color: 'gray' })
+@@ -110,7 +110,11 @@ const Scene: FC = () => {
+   })
+ 
+   return (
+-    <Atmosphere ref={atmosphereRef} correctAltitude={correctAltitude}>
++    <Atmosphere
++      ref={atmosphereRef}
++      textures='atmosphere'
++      correctAltitude={correctAltitude}
++    >
+       <OrbitControls ref={setControls} />
+ 
+       {/* Background objects and light sources */}
+diff --git a/storybook/src/atmosphere/Atmosphere-LightingMask.tsx b/storybook/src/atmosphere/Atmosphere-LightingMask.tsx
+index 1083277..bf405ac 100644
+--- a/storybook/src/atmosphere/Atmosphere-LightingMask.tsx
++++ b/storybook/src/atmosphere/Atmosphere-LightingMask.tsx
+@@ -139,8 +139,8 @@ const ISS: FC<ISSProps> = ({ ...props }) => {
+ const Scene: FC = () => {
+   const { toneMappingMode } = useToneMappingControls({ exposure: 8 })
+   const { longitude, latitude, height } = useLocationControls({
+-    longitude: -110,
+-    latitude: 45,
++    longitude: -118.9455,
++    latitude: 34.2421,
+     height: 408000,
+     maxHeight: 408000
+   })
+@@ -208,7 +208,11 @@ const Scene: FC = () => {
+   }, [longitude, latitude, height])
+ 
+   return (
+-    <Atmosphere ref={setAtmosphere} correctAltitude={correctAltitude}>
++    <Atmosphere
++      ref={setAtmosphere}
++      textures='atmosphere'
++      correctAltitude={correctAltitude}
++    >
+       <OrbitControls minDistance={20} maxDistance={1e5} />
+ 
+       {/* Background objects and light sources */}
+diff --git a/storybook/src/atmosphere/Atmosphere-Vanilla.tsx b/storybook/src/atmosphere/Atmosphere-Vanilla.tsx
+index 799e0e9..377a05c 100644
+--- a/storybook/src/atmosphere/Atmosphere-Vanilla.tsx
++++ b/storybook/src/atmosphere/Atmosphere-Vanilla.tsx
+@@ -66,9 +66,9 @@ const inertialToECEFMatrix = new Matrix4()
+ const sunDirection = new Vector3()
+ const moonDirection = new Vector3()
+ 
+-// A midnight sun in summer.
+-const referenceDate = new Date('2000-06-01T10:00:00Z')
+-const geodetic = new Geodetic(0, radians(67), 1000)
++// Late afternoon over Gerry Ranch, Camarillo, CA.
++const referenceDate = new Date('2000-06-01T00:00:00Z')
++const geodetic = new Geodetic(radians(-118.9455), radians(34.2421), 1000)
+ const position = geodetic.toECEF()
+ const up = Ellipsoid.WGS84.getSurfaceNormal(position)
+ 
+diff --git a/storybook/src/atmosphere/Atmosphere-WorldOriginRebasing.tsx b/storybook/src/atmosphere/Atmosphere-WorldOriginRebasing.tsx
+index 344e958..887cc89 100644
+--- a/storybook/src/atmosphere/Atmosphere-WorldOriginRebasing.tsx
++++ b/storybook/src/atmosphere/Atmosphere-WorldOriginRebasing.tsx
+@@ -117,7 +117,11 @@ const Scene: FC = () => {
+         <meshLambertMaterial color='white' transparent alphaMap={texture} />
+       </Plane>
+       <LittlestTokyo ref={modelRef} scale={0.01} />
+-      <Atmosphere ref={setAtmosphere} correctAltitude={correctAltitude}>
++      <Atmosphere
++        ref={setAtmosphere}
++        textures='atmosphere'
++        correctAltitude={correctAltitude}
++      >
+         <Sky groundAlbedo='white' />
+         <Stars data='atmosphere/stars.bin' />
+         <SkyLight />
+diff --git a/storybook/src/atmosphere/Sky-Basic.tsx b/storybook/src/atmosphere/Sky-Basic.tsx
+index f957c29..0efa530 100644
+--- a/storybook/src/atmosphere/Sky-Basic.tsx
++++ b/storybook/src/atmosphere/Sky-Basic.tsx
+@@ -21,7 +21,7 @@ import { useToneMappingControls } from '../helpers/useToneMappingControls'
+ const Scene: FC = () => {
+   const { toneMappingMode } = useToneMappingControls({ exposure: 10 })
+   const { longitude, latitude, height } = useLocationControls()
+-  const motionDate = useLocalDateControls({ longitude, dayOfYear: 0 })
++  const motionDate = useLocalDateControls({ longitude })
+   const { correctAltitude } = useControls('atmosphere', {
+     correctAltitude: true
+   })
+@@ -35,7 +35,11 @@ const Scene: FC = () => {
+   return (
+     <>
+       <OrbitControls ref={controlsRef} minDistance={5} />
+-      <Atmosphere ref={atmosphereRef} correctAltitude={correctAltitude}>
++      <Atmosphere
++        ref={atmosphereRef}
++        textures='atmosphere'
++        correctAltitude={correctAltitude}
++      >
+         <Sky />
+       </Atmosphere>
+       <EffectComposer multisampling={0}>
+diff --git a/storybook/src/atmosphere/Sky-EnvironmentMap.tsx b/storybook/src/atmosphere/Sky-EnvironmentMap.tsx
+index 8552f40..022d3ce 100644
+--- a/storybook/src/atmosphere/Sky-EnvironmentMap.tsx
++++ b/storybook/src/atmosphere/Sky-EnvironmentMap.tsx
+@@ -56,7 +56,11 @@ const Scene: FC = () => {
+   return (
+     <>
+       <OrbitControls ref={controlsRef} minDistance={5} />
+-      <Atmosphere ref={atmosphereRef} correctAltitude={correctAltitude}>
++      <Atmosphere
++        ref={atmosphereRef}
++        textures='atmosphere'
++        correctAltitude={correctAltitude}
++      >
+         <Sky />
+         <group ref={envMapParentRef}>
+           <RenderCubeTexture ref={setEnvMap} resolution={64}>
+diff --git a/storybook/src/clouds/3DTilesRenderer-Story.tsx b/storybook/src/clouds/3DTilesRenderer-Story.tsx
+index de737a8..9124b5c 100644
+--- a/storybook/src/clouds/3DTilesRenderer-Story.tsx
++++ b/storybook/src/clouds/3DTilesRenderer-Story.tsx
+@@ -92,8 +92,8 @@ interface SceneProps extends LocalDateControlsParams {
+ 
+ const Scene: FC<SceneProps> = ({
+   exposure = 10,
+-  longitude = 139.7671,
+-  latitude = 35.6812,
++  longitude = -118.9455,
++  latitude = 34.2421,
+   heading = 180,
+   pitch = -30,
+   distance = 4500,
+@@ -159,7 +159,11 @@ const Scene: FC<SceneProps> = ({
+   useKeyboardControl()
+ 
+   return (
+-    <Atmosphere ref={atmosphereRef} correctAltitude={correctAltitude}>
++    <Atmosphere
++      ref={atmosphereRef}
++      textures='atmosphere'
++      correctAltitude={correctAltitude}
++    >
+       <GlobeAndControls />
+       <EffectComposer ref={composerRef} multisampling={0}>
+         <Fragment
+diff --git a/storybook/src/clouds/3DTilesRenderer.stories.tsx b/storybook/src/clouds/3DTilesRenderer.stories.tsx
+index a61407b..d7f3fe7 100644
+--- a/storybook/src/clouds/3DTilesRenderer.stories.tsx
++++ b/storybook/src/clouds/3DTilesRenderer.stories.tsx
+@@ -9,6 +9,20 @@ export default {
+   }
+ } satisfies Meta
+ 
++export const JerrysRanch: StoryFn = () => (
++  <Story
++    dayOfYear={281}
++    timeOfDay={16.5}
++    exposure={10}
++    longitude={-118.9455}
++    latitude={34.2421}
++    heading={-70}
++    pitch={-25}
++    distance={2500}
++    coverage={0.3}
++  />
++)
++
+ export const Tokyo: StoryFn = () => (
+   <Story
+     dayOfYear={170}
+diff --git a/storybook/src/clouds/Clouds-Basic.tsx b/storybook/src/clouds/Clouds-Basic.tsx
+index bfe7795..e8ed318 100644
+--- a/storybook/src/clouds/Clouds-Basic.tsx
++++ b/storybook/src/clouds/Clouds-Basic.tsx
+@@ -27,12 +27,12 @@ const Scene: FC = () => {
+   const { toneMappingMode } = useToneMappingControls({ exposure: 10 })
+   const { longitude, latitude, height } = useLocationControls(
+     {
+-      longitude: 30,
++      longitude: -118.9455,
+       height: 300
+     },
+     { collapsed: true }
+   )
+-  const motionDate = useLocalDateControls({ longitude, dayOfYear: 0 })
++  const motionDate = useLocalDateControls({ longitude })
+   const { correctAltitude } = useControls(
+     'atmosphere',
+     { correctAltitude: true },
+@@ -71,7 +71,11 @@ const Scene: FC = () => {
+           </Box>
+         </EastNorthUpFrame>
+       )}
+-      <Atmosphere ref={atmosphereRef} correctAltitude={correctAltitude}>
++      <Atmosphere
++        ref={atmosphereRef}
++        textures='atmosphere'
++        correctAltitude={correctAltitude}
++      >
+         <EffectComposer multisampling={0} enableNormalPass>
+           <Fragment key={JSON.stringify([enabled, toneMapping])}>
+             {enabled && (
+diff --git a/storybook/src/clouds/Clouds-CustomLayers.tsx b/storybook/src/clouds/Clouds-CustomLayers.tsx
+index a48320e..42860b8 100644
+--- a/storybook/src/clouds/Clouds-CustomLayers.tsx
++++ b/storybook/src/clouds/Clouds-CustomLayers.tsx
+@@ -22,7 +22,7 @@ const Scene: FC = () => {
+   const { toneMappingMode } = useToneMappingControls({ exposure: 10 })
+   const { longitude, latitude, height } = useLocationControls(
+     {
+-      longitude: 30,
++      longitude: -118.9455,
+       height: 500
+     },
+     { collapsed: true }
+@@ -42,7 +42,7 @@ const Scene: FC = () => {
+   return (
+     <>
+       <OrbitControls ref={controlsRef} minDistance={1000} />
+-      <Atmosphere ref={atmosphereRef}>
++      <Atmosphere ref={atmosphereRef} textures='atmosphere'>
+         <EffectComposer multisampling={0} enableNormalPass>
+           <Clouds coverage={0.3} shadow-maxFar={1e5} disableDefaultLayers>
+             <CloudLayer
+diff --git a/storybook/src/clouds/Clouds-Vanilla.tsx b/storybook/src/clouds/Clouds-Vanilla.tsx
+index 3ef212c..769e96a 100644
+--- a/storybook/src/clouds/Clouds-Vanilla.tsx
++++ b/storybook/src/clouds/Clouds-Vanilla.tsx
+@@ -61,8 +61,8 @@ let aerialPerspective: AerialPerspectiveEffect
+ let clouds: CloudsEffect
+ let composer: EffectComposer
+ 
+-const date = new Date('2000-06-01T10:00:00Z')
+-const geodetic = new Geodetic(0, radians(67), 500)
++const date = new Date('2000-06-01T00:00:00Z')
++const geodetic = new Geodetic(radians(-118.9455), radians(34.2421), 500)
+ const position = geodetic.toECEF()
+ const up = Ellipsoid.WGS84.getSurfaceNormal(position)
+ 
+diff --git a/storybook/src/clouds/Clouds-WorldOriginRebasing.tsx b/storybook/src/clouds/Clouds-WorldOriginRebasing.tsx
+index 6a841ae..ac65f69 100644
+--- a/storybook/src/clouds/Clouds-WorldOriginRebasing.tsx
++++ b/storybook/src/clouds/Clouds-WorldOriginRebasing.tsx
+@@ -38,10 +38,10 @@ const position = new Vector3()
+ const Scene: FC = () => {
+   const { toneMappingMode } = useToneMappingControls({ exposure: 10 })
+   const { longitude, latitude, height } = useLocationControls({
+-    longitude: 30,
++    longitude: -118.9455,
+     height: 300
+   })
+-  const motionDate = useLocalDateControls({ longitude, dayOfYear: 0 })
++  const motionDate = useLocalDateControls({ longitude })
+   const { correctAltitude } = useControls(
+     'atmosphere',
+     { correctAltitude: true },
+@@ -82,7 +82,11 @@ const Scene: FC = () => {
+         followCamera
+         infiniteGrid
+       /> */}
+-      <Atmosphere ref={setAtmosphere} correctAltitude={correctAltitude}>
++      <Atmosphere
++        ref={setAtmosphere}
++        textures='atmosphere'
++        correctAltitude={correctAltitude}
++      >
+         <Sky />
+         <SkyLight />
+         <SunLight />
+diff --git a/storybook/src/helpers/useLocationControls.tsx b/storybook/src/helpers/useLocationControls.tsx
+index 653f457..2a88bae 100644
+--- a/storybook/src/helpers/useLocationControls.tsx
++++ b/storybook/src/helpers/useLocationControls.tsx
+@@ -13,9 +13,10 @@ export interface LocationControlValues {
+ 
+ export function useLocationControls(
+   {
+-    longitude: initialLongitude = 0,
+-    latitude: initialLatitude = 35,
+-    height: initialHeight = 2000,
++    // Gerry Ranch ("Jerry's Ranch"), 9015 Rosita Rd, Camarillo, CA
++    longitude: initialLongitude = -118.9455,
++    latitude: initialLatitude = 34.2421,
++    height: initialHeight = 300,
+     maxHeight = 30000
+   }: Partial<LocationControlValues> = {},
+   folderSettings?: FolderSettings
