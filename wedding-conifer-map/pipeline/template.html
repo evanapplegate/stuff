@@ -125,6 +125,13 @@ header .count b{color:var(--ink);font-weight:700}
 .citylab{pointer-events:none;font:600 11px/1 "Archivo Narrow",Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);text-shadow:0 0 3px var(--label-halo),0 0 5px var(--label-halo),0 0 7px var(--label-halo);transform:translate(-50%,-50%)}
 .citylab.min{font-size:9.5px;letter-spacing:.1em;opacity:.85}
 
+#notes[hidden]{display:none}
+#notes{position:fixed;inset:0;z-index:30;background:rgba(20,24,18,.45);display:flex;align-items:center;justify-content:center;padding:18px}
+#notespanel{position:relative;background:var(--panel);color:var(--ink);border:1.5px solid var(--line);border-radius:10px;box-shadow:var(--shadow);max-width:560px;max-height:82vh;overflow-y:auto;padding:20px 24px;font-size:13.5px}
+#notespanel h2{font:400 24px/1.1 "Instrument Serif",Georgia,serif;margin:0 0 10px}
+#notespanel p{margin:0 0 10px}
+#notespanel .src{color:var(--ink-soft);font-size:11.5px;border-top:1px solid var(--panel-edge);padding-top:9px;margin-top:12px}
+#notesclose{position:absolute;top:8px;right:10px;background:none;border:0;color:var(--ink-soft);font-size:22px;cursor:pointer;line-height:1}
 #sheetbtn{display:none}
 footer{display:none}
 
@@ -157,6 +164,7 @@ footer{display:none}
     <button class="jump" id="jumpSocal" type="button">⤢ SoCal</button>
     <div id="chips"></div>
     <input id="search" type="search" placeholder="Search venue or town…" aria-label="Search venues">
+    <button class="jump" id="notesbtn" type="button" aria-haspopup="dialog">About</button>
   </div>
   <div id="main">
     <nav id="list" aria-label="Venue index"></nav>
@@ -175,6 +183,18 @@ footer{display:none}
   </div>
 </div>
 
+<div id="notes" role="dialog" aria-modal="true" aria-label="About this map" hidden>
+  <div id="notespanel">
+    <button id="notesclose" type="button" aria-label="Close">×</button>
+    <h2>Reading this map</h2>
+    <p><b>Where the conifers are.</b> Around the Bay: coast-redwood country in the Santa Cruz Mountains, Marin, and the Oakland–Berkeley hills, plus the Presidio’s planted cypress forest. In the south: the Angeles crest, the San Bernardino Mountains (Arrowhead–Big Bear) and Idyllwild — the two starred regions sit just outside the asked-for areas, but they are the conifer country within reach of LA.</p>
+    <p><b>Solid vs. open dots.</b> Solid red = venues in native conifer forest. Open rings = planted groves — Japanese-garden black pines, golf-ground pines, the Calamigos redwood pocket, the Presidio’s historic forest.</p>
+    <p><b>Honest gaps.</b> Ventura &amp; Ojai turned up zero verifiable conifer-canopy venues (it’s oak country; Serra Cross Park’s pines burned in the 2017 Thomas Fire). Orange County has one: Pines Park in Dana Point, a planted blufftop grove, ceremony-only by city permit. The San Fernando Valley offers two planted-pine gardens.</p>
+    <p><b>Gone but asked-about.</b> Big Basin’s wedding sites were lost in the 2020 CZU fire. Wayfarers Chapel (Palos Verdes) was dismantled in 2024. The Eaton Fire (2025) removed the Altadena candidates. Newcomb’s Ranch remains closed.</p>
+    <p><b>Fine print.</b> Several dots are park reservations rather than turnkey venues (Roberts, Sanborn, Huddart, Old Mill Park, Pines Park). Holcomb Valley Ranch and Knickerbocker Mansion were listed for sale at compile time. Prices are listing hints from 2024–2026 — confirm everything with the venue.</p>
+    <p class="src">Canopy: LANDFIRE LF2025 Existing Vegetation Type, 30 m (USGS/USFS), classed by EVT physiognomy — conifer, conifer–hardwood, redwood — inside the dashed extents. Venue list compiled from Here Comes The Guide, The Knot, WeddingWire, Zola, park districts and venue sites, October 2026. Geocoding: OpenStreetMap Nominatim &amp; US Census.</p>
+  </div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script id="d-land" type="application/json">__LAND__</script>
 <script id="d-counties" type="application/json">__COUNTIES__</script>
@@ -260,16 +280,16 @@ function buildStyle(){
       {id:'cover-line',type:'line',source:'cover',paint:{'line-color':p.line,'line-width':1,'line-dasharray':[2,2]}},
       {id:'county-line',type:'line',source:'counties',paint:{'line-color':p.line,'line-width':['interpolate',['linear'],['zoom'],6,.6,11,1.4],'line-dasharray':[5,2,1.2,2]}},
       {id:'v-halo',type:'circle',source:'venues',paint:{
-        'circle-radius':['case',['boolean',['feature-state','hover'],false],13,9],
+        'circle-radius':['interpolate',['linear'],['zoom'],5.5,['case',['boolean',['feature-state','hover'],false],9,5.5],9,['case',['boolean',['feature-state','hover'],false],12,8.5],12,['case',['boolean',['feature-state','hover'],false],14,10]],
         'circle-color':p.dot,'circle-opacity':0.22,'circle-blur':0.15}},
       {id:'v-dot',type:'circle',source:'venues',paint:{
-        'circle-radius':['case',['boolean',['feature-state','hover'],false],7,5.5],
+        'circle-radius':['interpolate',['linear'],['zoom'],5.5,['case',['boolean',['feature-state','hover'],false],5,3.6],9,['case',['boolean',['feature-state','hover'],false],7.5,5.5],12,['case',['boolean',['feature-state','hover'],false],9,6.5]],
         'circle-color':['case',['==',['get','planted'],1],'rgba(0,0,0,0)',p.dot],
         'circle-stroke-color':['case',['boolean',['feature-state','hover'],false],p.hot,p.dot],
         'circle-stroke-width':['case',['==',['get','planted'],1],2.6,1.6],
         'circle-pitch-alignment':'map'}},
       {id:'v-ring',type:'circle',source:'venues',filter:['==',['get','planted'],0],paint:{
-        'circle-radius':['case',['boolean',['feature-state','hover'],false],7,5.5],
+        'circle-radius':['interpolate',['linear'],['zoom'],5.5,['case',['boolean',['feature-state','hover'],false],5,3.6],9,['case',['boolean',['feature-state','hover'],false],7.5,5.5],12,['case',['boolean',['feature-state','hover'],false],9,6.5]],
         'circle-color':'rgba(0,0,0,0)','circle-stroke-color':p.ring,'circle-stroke-width':1.2}}
     ]
   };
@@ -410,7 +430,7 @@ function focusVenue(v,fly){
     .setHTML('<div class="pp"><h2>'+esc(v.name)+'</h2><div class="where">'+esc(v.town)+' · '+esc(v.region.replace(' (bonus)',''))+'</div>'+
       '<span class="canopy'+(v.planted?' planted':'')+'">'+esc(v.canopy)+(v.planted?' · planted':'')+'</span>'+
       '<div class="set">'+esc(v.setting)+'</div>'+
-      (v.capacity?'<div class="where">Capacity: '+esc(v.capacity)+'</div>':'')+
+      ((v.capacity||v.price)?'<div class="where">'+[v.capacity&&('Capacity: '+esc(v.capacity)),v.price&&esc(v.price)].filter(Boolean).join(' · ')+'</div>':'')+
       '<div class="links">'+linkRow(v)+'</div>'+
       (v.address?'<div class="addr">'+esc(v.address)+'</div>':'')+
       '</div>')
@@ -439,8 +459,12 @@ map.on('mouseleave','v-halo',()=>{
 const fit=(bb)=>reduceMotion?map.fitBounds(bb,{padding:40,duration:0}):map.fitBounds(bb,{padding:40});
 $('#jumpBay').onclick=()=>fit(BAY_BB);
 $('#jumpSocal').onclick=()=>fit(SOCAL_BB);
-$('#sheetbtn').onclick=()=>listEl.classList.toggle('open');
+$('#sheetbtn').onclick=()=>{const open=listEl.classList.toggle('open');$('#sheetbtn').textContent=open?'Close index':'Venue index'};
 if(window.matchMedia('(max-width:760px)').matches){$('#legend').classList.add('collapsed');$('#lgtoggle').textContent='+';}
+$('#notesbtn').onclick=()=>{$('#notes').hidden=false;$('#notesclose').focus()};
+$('#notesclose').onclick=()=>{$('#notes').hidden=true};
+$('#notes').addEventListener('click',e=>{if(e.target.id==='notes')$('#notes').hidden=true});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#notes').hidden=true});
 $('#lgtoggle').onclick=()=>{const L=$('#legend');L.classList.toggle('collapsed');$('#lgtoggle').textContent=L.classList.contains('collapsed')?'+':'–'};
 
 map.on('error',e=>{console.error('maperr',e&&e.error&&e.error.message||e)});

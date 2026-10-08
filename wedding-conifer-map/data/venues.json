@@ -1,0 +1,1437 @@
+[
+{
+"name": "Amphitheatre of the Redwoods at Pema Osel Ling",
+"region": "Santa Cruz Mountains",
+"town": "Corralitos",
+"county": "Santa Cruz",
+"address": "2013 Eureka Canyon Road",
+"canopy": "redwood forest",
+"canopy_full": "redwood forest; fairy-ring amphitheater grown from one grandmother tree",
+"planted": 0,
+"setting": "Raised deck ceremony inside the redwood fairy-ring; Celebration Hall/Lawn reception; cabins and camping on 102 acres",
+"capacity": "35-250",
+"price": "",
+"links": {
+"official": "https://amphitheateroftheredwoods.com",
+"weddingwire": "https://www.weddingwire.com/biz/amphitheatre-of-the-redwoods-at-pema-osel-ling-watsonville/2a5d34ca01112317.html",
+"hctg": "https://www.herecomestheguide.com/wedding-ideas/santa-cruz-mountain-wedding-venues-california"
+},
+"lat": 37.05767,
+"lon": -121.82014,
+"conf": "verified-fetch"
+},
+{
+"name": "Felton Guild",
+"region": "Santa Cruz Mountains",
+"town": "Felton",
+"county": "Santa Cruz",
+"address": "5449 Highway 9",
+"canopy": "coast redwood cathedral grove",
+"canopy_full": "coast redwood cathedral grove",
+"planted": 0,
+"setting": "Ceremony in the redwood cathedral (~100 on redwood benches), reception lawn for 200+",
+"capacity": "~100 grove / 200+ lawn",
+"price": "",
+"links": {
+"official": "https://feltonguildweddings.com",
+"theknot": "https://www.theknot.com/marketplace/felton-guild-felton-ca-599091"
+},
+"lat": 37.04094,
+"lon": -122.0722,
+"conf": "search-only"
+},
+{
+"name": "Fern River Resort",
+"region": "Santa Cruz Mountains",
+"town": "Felton",
+"county": "Santa Cruz",
+"address": "5250 Highway 9",
+"canopy": "coast redwoods",
+"canopy_full": "coast redwoods ringing a riverside meadow (across from Henry Cowell old growth)",
+"planted": 0,
+"setting": "Redwood gazebo ceremony in a meadow beside the San Lorenzo River; cabin buyout weekends",
+"capacity": "150-200",
+"price": "~$4,000-5,000 event fee + 3-night cabin buyout",
+"links": {
+"other": "https://www.wedding-spot.com/venue/9421/fern-river-resort/"
+},
+"lat": 37.03899,
+"lon": -122.06932,
+"conf": "search-only"
+},
+{
+"name": "Highlands House and Park",
+"region": "Santa Cruz Mountains",
+"town": "Ben Lomond",
+"county": "Santa Cruz",
+"address": "8500 Highway 9",
+"canopy": "park lawn",
+"canopy_full": "park lawn encircled by oaks, pines and redwoods",
+"planted": 0,
+"setting": "Gazebo ceremony at one end of a broad lawn, county-run house and grounds rental",
+"capacity": "100-200 (seasonal caps)",
+"price": "$1,062-$1,770 site fee",
+"links": {
+"official": "https://www.scparks.com/Home/Parks/ListofAllCountyParks/HighlandsPark/HighlandsPark-Weddings.aspx",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/highlands-house-and-park"
+},
+"lat": 37.08031,
+"lon": -122.08159,
+"conf": "verified-fetch"
+},
+{
+"name": "Huddart Park",
+"region": "Santa Cruz Mountains",
+"town": "Woodside",
+"county": "San Mateo",
+"address": "1100 Kings Mountain Road",
+"canopy": "coast redwood and Douglas",
+"canopy_full": "coast redwood and Douglas fir forest",
+"planted": 0,
+"setting": "Weddings via reservable group sites (Redwood picnic area, Sequoia Amphitheater); 25+ guests require reservation",
+"capacity": "",
+"price": "group picnic/special-event fees",
+"links": {
+"official": "https://parks.smcgov.org/huddart-park-reservable-facilities"
+},
+"lat": 37.43547,
+"lon": -122.29604,
+"conf": "search-only"
+},
+{
+"name": "Kennolyn (Hilltop Hacienda & Stone Creek Village)",
+"region": "Santa Cruz Mountains",
+"town": "Soquel",
+"county": "Santa Cruz",
+"address": "8400 Glen Haven Road",
+"canopy": "ancient coast redwoods",
+"canopy_full": "ancient coast redwoods across 450 acres",
+"planted": 0,
+"setting": "Ceremonies beneath ancient redwoods at Stone Creek Village, or Hilltop Hacienda lawn above Monterey Bay",
+"capacity": "",
+"price": "$$ (HCTG)",
+"links": {
+"official": "https://www.kennolyn.com/",
+"hctg": "https://www.herecomestheguide.com/wedding-ideas/santa-cruz-mountain-wedding-venues-california"
+},
+"lat": 37.01615,
+"lon": -121.93708,
+"conf": "verified-fetch"
+},
+{
+"name": "Nestldown",
+"region": "Santa Cruz Mountains",
+"town": "Los Gatos",
+"county": "Santa Clara",
+"address": "22420 Old Santa Cruz Highway",
+"canopy": "coast redwood grove",
+"canopy_full": "coast redwood grove ringing 36 acres of gardens",
+"planted": 0,
+"setting": "Vows beneath towering redwoods or at the lakeside amphitheater; barn reception",
+"capacity": "",
+"price": "$$-$$$ (HCTG)",
+"links": {
+"official": "https://www.nestldown.com/",
+"hctg": "https://www.herecomestheguide.com/wedding-ideas/woodsy-northern-california-wedding-venues"
+},
+"lat": 37.14701,
+"lon": -121.97016,
+"conf": "verified-fetch"
+},
+{
+"name": "Pavilion at Redwood Estates",
+"region": "Santa Cruz Mountains",
+"town": "Los Gatos",
+"county": "Santa Clara",
+"address": "21450 Madrone Drive",
+"canopy": "lawn backed by towering",
+"canopy_full": "lawn backed by towering coast redwoods",
+"planted": 0,
+"setting": "Community pavilion and lawn with redwood backdrop off Hwy 17",
+"capacity": "",
+"price": "$-$$ (HCTG)",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-ideas/santa-cruz-mountain-wedding-venues-california"
+},
+"lat": 37.15638,
+"lon": -121.98178,
+"conf": "verified-fetch"
+},
+{
+"name": "Roaring Camp Weddings",
+"region": "Santa Cruz Mountains",
+"town": "Felton",
+"county": "Santa Cruz",
+"address": "5401 Graham Hill Rd",
+"canopy": "old-growth coast redwoods",
+"canopy_full": "old-growth coast redwoods; Cathedral Grove fairy-ring",
+"planted": 0,
+"setting": "Steam train carries guests to Cathedral Grove/Bear Mountain for redwood-ring ceremonies; Bret Harte Hall reception",
+"capacity": "intimate to large",
+"price": "$-$$ (HCTG)",
+"links": {
+"official": "https://www.roaringcamp.com/weddings",
+"other": "https://tracksideties.com/"
+},
+"lat": 37.0419,
+"lon": -122.0617,
+"conf": "verified-fetch"
+},
+{
+"name": "Sanborn County Park",
+"region": "Santa Cruz Mountains",
+"town": "Saratoga",
+"county": "Santa Clara",
+"address": "16055 Sanborn Road",
+"canopy": "second-growth coast redwood picnic",
+"canopy_full": "second-growth coast redwood picnic groves",
+"planted": 0,
+"setting": "Weddings at reservable group picnic/day-use areas under redwoods (county reservation, not a turnkey venue)",
+"capacity": "",
+"price": "day-use picnic reservation",
+"links": {
+"official": "https://gooutsideandplay.org/mbl/dayuse",
+"other": "https://patch.com/california/pacifica/rustic-meets-glamour--wedding-in-sanborn-county-park_df9d53a6"
+},
+"lat": 37.23401,
+"lon": -122.06417,
+"conf": "search-only"
+},
+{
+"name": "Saratoga Springs",
+"region": "Santa Cruz Mountains",
+"town": "Saratoga",
+"county": "Santa Clara",
+"address": "22801 Big Basin Way",
+"canopy": "Cathedral Grove",
+"canopy_full": "Cathedral Grove — coast redwoods and box elders arching overhead",
+"planted": 0,
+"setting": "Creekside walk over a bridge into the Cathedral Grove redwood ceremony/reception site",
+"capacity": "up to 800",
+"price": "all-inclusive from ~$2,950 (Zola)",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/saratoga-springs"
+},
+"lat": 37.24945,
+"lon": -122.06882,
+"conf": "verified-fetch"
+},
+{
+"name": "Secret Redwood Retreat",
+"region": "Santa Cruz Mountains",
+"town": "Aptos",
+"county": "Santa Cruz",
+"address": "",
+"canopy": "coast redwood grove",
+"canopy_full": "coast redwood grove",
+"planted": 0,
+"setting": "Intimate/micro weddings amid redwoods (Secret Garden Ceremonies)",
+"capacity": "up to 38 seated",
+"price": "from ~$4,850 (Zola)",
+"links": {
+"other": "https://zola.com/wedding-vendors/wedding-venues/secret-garden-ceremonies-aptos-ca"
+},
+"lat": 36.985,
+"lon": -121.887,
+"conf": "search-only"
+},
+{
+"name": "Sparrow Valley Retreat",
+"region": "Santa Cruz Mountains",
+"town": "Aptos",
+"county": "Santa Cruz",
+"address": "2715 Sparrow Valley Road",
+"canopy": "towering coast redwoods",
+"canopy_full": "towering coast redwoods; fairy-ring redwood cathedral",
+"planted": 0,
+"setting": "Ceremony under an outdoor redwood cathedral fairy-ring on 12 acres by Valencia Creek; handcrafted redwood bar",
+"capacity": "up to 120",
+"price": "",
+"links": {
+"official": "https://sparrowvalleyretreat.com",
+"weddingwire": "https://weddingwire.com/biz/sparrow-valley-retreat/0fdac02cc8f47d2f.html",
+"other": "https://www.santacruz.org/listings/sparrow-valley-retreat/"
+},
+"lat": 37.02367,
+"lon": -121.87924,
+"conf": "search-only"
+},
+{
+"name": "Sydalyn Hill",
+"region": "Santa Cruz Mountains",
+"town": "Felton",
+"county": "Santa Cruz",
+"address": "",
+"canopy": "hilltop among coast redwoods",
+"canopy_full": "hilltop among coast redwoods above San Lorenzo Valley",
+"planted": 0,
+"setting": "Private 20-acre family property; redwood-grove/meadow ceremonies, few weddings per year (May-Sep)",
+"capacity": "up to 150",
+"price": "from ~$17,000 (Zola)",
+"links": {
+"theknot": "https://www.theknot.com/marketplace/sydalyn-hill-felton-ca-2037119"
+},
+"lat": 37.0569,
+"lon": -122.068,
+"conf": "search-only"
+},
+{
+"name": "The Barn at River House",
+"region": "Santa Cruz Mountains",
+"town": "Ben Lomond",
+"county": "Santa Cruz",
+"address": "9640 Highway 9",
+"canopy": "coast redwoods and oaks",
+"canopy_full": "coast redwoods and oaks bordering a riverside clearing",
+"planted": 0,
+"setting": "Ceremony in the redwood grove or at a gazebo above the San Lorenzo River; new 3,500 sq ft barn reception",
+"capacity": "200-250",
+"price": "from ~$17,000 (Zola)",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/river-house"
+},
+"lat": 37.08721,
+"lon": -122.08875,
+"conf": "verified-fetch"
+},
+{
+"name": "The Mountain Terrace",
+"region": "Santa Cruz Mountains",
+"town": "Woodside",
+"county": "San Mateo",
+"address": "17285 Skyline Boulevard",
+"canopy": "meadow bordered by soaring",
+"canopy_full": "meadow bordered by soaring coast redwoods (with oaks)",
+"planted": 0,
+"setting": "Vows in the grassy Skyline meadow surrounded by redwoods; on-site redwood grove; lodge reception",
+"capacity": "up to 400",
+"price": "",
+"links": {
+"official": "https://www.themountainterrace.com/",
+"hctg": "https://www.herecomestheguide.com/wedding-ideas/woodsy-northern-california-wedding-venues"
+},
+"lat": 37.38684,
+"lon": -122.2644,
+"conf": "verified-fetch"
+},
+{
+"name": "The Sequoia (Sequoia Retreat Center)",
+"region": "Santa Cruz Mountains",
+"town": "Ben Lomond",
+"county": "Santa Cruz",
+"address": "11445 Alba Road",
+"canopy": "old-growth coast redwood grove",
+"canopy_full": "old-growth coast redwood grove (Peace Park)",
+"planted": 0,
+"setting": "Vows in the Peace Park old-growth grove; reception at Pixie's Garden or Las Alas Lodge; 33 cabins",
+"capacity": "85 indoor / 150 outdoor",
+"price": "$5,450-$19,900 rental (HCTG)",
+"links": {
+"official": "https://sequoiaretreatcenter.com",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/the-sequoia"
+},
+"lat": 37.09745,
+"lon": -122.10454,
+"conf": "verified-fetch"
+},
+{
+"name": "Valley Presbyterian Church",
+"region": "Santa Cruz Mountains",
+"town": "Portola Valley",
+"county": "San Mateo",
+"address": "945 Portola Road",
+"canopy": "grove of coast redwoods",
+"canopy_full": "grove of coast redwoods outside sanctuary glass wall",
+"planted": 0,
+"setting": "Indoor ceremony before a wall of windows overlooking the redwood grove",
+"capacity": "",
+"price": "$ (HCTG)",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-ideas/santa-cruz-mountain-wedding-venues-california"
+},
+"lat": 37.38367,
+"lon": -122.23492,
+"conf": "verified-fetch"
+},
+{
+"name": "Walden West",
+"region": "Santa Cruz Mountains",
+"town": "Saratoga",
+"county": "Santa Clara",
+"address": "15555 Sanborn Road",
+"canopy": "redwood forest backdrop",
+"canopy_full": "redwood forest backdrop of Sanborn Park",
+"planted": 0,
+"setting": "Rustic ceremony site among the redwoods on a 35-acre science-center campus, with reception hall",
+"capacity": "up to 200",
+"price": "~$5,800 ceremony+reception (Wedding Spot)",
+"links": {
+"weddingwire": "https://www.weddingwire.com/biz/walden-west-saratoga/60f7e623fbf566ca.html",
+"other": "https://wedding-spot.com/venue/2222/contact"
+},
+"lat": 37.23902,
+"lon": -122.06955,
+"conf": "search-only"
+},
+{
+"name": "Waterfall Lodge & Retreat",
+"region": "Santa Cruz Mountains",
+"town": "Ben Lomond",
+"county": "Santa Cruz",
+"address": "180 Hidden Falls Trail",
+"canopy": "secluded coast redwood forest",
+"canopy_full": "secluded coast redwood forest",
+"planted": 0,
+"setting": "Outdoor ceremony sites and travertine patio under redwoods; 32+ cabins for wedding-weekend buyouts",
+"capacity": "150 day / 86 overnight",
+"price": "",
+"links": {
+"weddingwire": "https://m.weddingwire.com/biz/waterfall-lodge-retreat/670fd96393f287c4.html",
+"other": "https://www.wedding-spot.com/venue/15998/waterfall-lodge-retreat/"
+},
+"lat": 37.09486,
+"lon": -122.11368,
+"conf": "search-only"
+},
+{
+"name": "YMCA Camp Campbell",
+"region": "Santa Cruz Mountains",
+"town": "Boulder Creek",
+"county": "Santa Cruz",
+"address": "16275 Highway 9",
+"canopy": "coast redwood forest camp",
+"canopy_full": "coast redwood forest camp",
+"planted": 0,
+"setting": "Ceremony in a redwood grove seating ~150; camp-wide weekend packages with cabins",
+"capacity": "up to 250",
+"price": "from ~$10,000 (Zola)",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-ideas/santa-cruz-mountain-wedding-venues-california",
+"other": "https://zola.com/wedding-vendors/wedding-venues/ymca-camp-campbell"
+},
+"lat": 37.16302,
+"lon": -122.1371,
+"conf": "verified-fetch"
+},
+{
+"name": "Brazilian Room, Tilden Regional Park",
+"region": "SF Bay Area",
+"town": "Berkeley",
+"county": "Contra Costa",
+"address": "Wildcat Canyon Rd at Shasta Rd, Tilden Park",
+"canopy": "lawn and flagstone patio",
+"canopy_full": "lawn and flagstone patio at the edge of Tilden's wooded hills (Monterey pine/eucalyptus)",
+"planted": 0,
+"setting": "Patio ceremonies facing gardens and hillside, reception in the historic 1939-Exposition-paneled hall (EBRPD rental)",
+"capacity": "150 seated indoor; ~225 with patio",
+"price": "",
+"links": {
+"official": "https://www.ebparks.org/wedding-fairs-brazilian-room-tilden-regional-park",
+"other": "https://ecologycenter.org/directory/directory-entries/brazilian-room-tilden-regional-park/"
+},
+"lat": 37.905,
+"lon": -122.2648,
+"conf": "search-only"
+},
+{
+"name": "Chabot Space & Science Center",
+"region": "SF Bay Area",
+"town": "Oakland",
+"county": "Alameda",
+"address": "10000 Skyline Blvd, Joaquin Miller Park",
+"canopy": "13 forested acres amid",
+"canopy_full": "13 forested acres amid Joaquin Miller Park's coast redwoods",
+"planted": 0,
+"setting": "Outdoor amphitheater/telescope-deck ceremonies over the redwood canopy, or under the 70-ft planetarium dome",
+"capacity": "Astronomy Hall 250",
+"price": "from ~$4,900 (Zola)",
+"links": {
+"theknot": "https://www.theknot.com/marketplace/chabot-space-and-science-center-oakland-ca-330925",
+"other": "https://www.visitoakland.com/blog/post/12-oakland-wedding-venues/"
+},
+"lat": 37.81789,
+"lon": -122.18084,
+"conf": "search-only"
+},
+{
+"name": "Deer Park Villa",
+"region": "SF Bay Area",
+"town": "Fairfax",
+"county": "Marin",
+"address": "367 Bolinas Road",
+"canopy": "~170-ft coast redwoods",
+"canopy_full": "~170-ft coast redwoods (planted 1937) over 4-acre estate",
+"planted": 1,
+"setting": "Ceremony in Grandpa Joe's Grove, a natural redwood amphitheater; fountain grove with two ancient redwoods",
+"capacity": "200 indoor / 300 outdoor",
+"price": "typ. $6,000-12,000 (Joy)",
+"links": {
+"official": "https://www.deerparkvilla.com/",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/deer-park-villa",
+"theknot": "https://www.theknot.com/marketplace/deer-park-villa-fairfax-ca-610322"
+},
+"lat": 37.98029,
+"lon": -122.59293,
+"conf": "verified-fetch"
+},
+{
+"name": "Golden Gate Club at the Presidio",
+"region": "SF Bay Area",
+"town": "San Francisco",
+"county": "San Francisco",
+"address": "135 Fisher Loop, Presidio",
+"canopy": "Monterey cypress/pine Presidio forest",
+"canopy_full": "historic planted Monterey cypress/pine Presidio forest",
+"planted": 1,
+"setting": "Ballrooms with floor-to-ceiling windows onto the Presidio forest, Bay and Golden Gate Bridge; courtyard; chapel steps away",
+"capacity": "up to 300",
+"price": "all-inclusive from ~$13,990 (Zola)",
+"links": {
+"official": "https://presidio.gov/venues/weddings",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/golden-gate-club-at-the-presidio-by-wedgewood-weddings",
+"weddingwire": "https://www.weddingwire.com/biz/golden-gate-club/bead8c81195c12d7.html",
+"other": "https://www.wedgewoodweddings.com/venue/northern-california/golden-gate-club"
+},
+"lat": 37.79993,
+"lon": -122.46166,
+"conf": "verified-fetch"
+},
+{
+"name": "Joaquin Miller Community Center",
+"region": "SF Bay Area",
+"town": "Oakland",
+"county": "Alameda",
+"address": "3594 Sanborn Drive, Joaquin Miller Park",
+"canopy": "mature coast redwoods",
+"canopy_full": "mature coast redwoods ringing the center in Joaquin Miller Park",
+"planted": 0,
+"setting": "City of Oakland rental: 8,500 sq ft hall with deck; small outdoor ceremonies at the Woodminster Cascades stone steps",
+"capacity": "whole-building or single-room rentals",
+"price": "",
+"links": {
+"official": "https://www.oaklandca.gov/Community/Parks-Facilities/Parks/Joaquin-Miller-Park",
+"other": "https://www.visitoakland.com/listing/joaquin-miller-community-center-%26-woodminster-cascades/4898/"
+},
+"lat": 37.81195,
+"lon": -122.18713,
+"conf": "search-only"
+},
+{
+"name": "Log Cabin at the Presidio",
+"region": "SF Bay Area",
+"town": "San Francisco",
+"county": "San Francisco",
+"address": "1299 Storey Avenue, Fort Scott, Presidio",
+"canopy": "built of Monterey cypress",
+"canopy_full": "built of Monterey cypress timber, lawn with cypress-forest and bridge views",
+"planted": 0,
+"setting": "Ceremony on the lawn/patio among Presidio cypress and pine, reception in the 1937 timber lodge",
+"capacity": "150-250 (sources vary)",
+"price": "all-inclusive from ~$11,490 (Zola)",
+"links": {
+"official": "https://presidio.gov/venues/Log-Cabin",
+"other": "https://www.wedgewoodweddings.com/venue/northern-california/log-cabin"
+},
+"lat": 37.7992,
+"lon": -122.4746,
+"conf": "verified-fetch"
+},
+{
+"name": "Marin Art & Garden Center",
+"region": "SF Bay Area",
+"town": "Ross",
+"county": "Marin",
+"address": "30 Sir Francis Drake Boulevard",
+"canopy": "mature redwoods and ancient",
+"canopy_full": "mature redwoods and ancient trees over 11 acres of gardens",
+"planted": 0,
+"setting": "Gazebo Lawn/Garden Lawn ceremonies with redwoods around; Livermore Pavilion reception",
+"capacity": "up to 300 (pavilion)",
+"price": "~$3,700-$10,000 (Eventective)",
+"links": {
+"official": "https://maringarden.org/booth-concannon-spotlight/",
+"other": "https://visitmarin.org/local-resources/resource-partners/wedding-planning-resources/marin-art-garden-center/"
+},
+"lat": 37.96343,
+"lon": -122.55493,
+"conf": "search-only"
+},
+{
+"name": "Mill Valley Community Center",
+"region": "SF Bay Area",
+"town": "Mill Valley",
+"county": "Marin",
+"address": "180 Camino Alto",
+"canopy": "towering coast redwoods",
+"canopy_full": "towering coast redwoods by 3-acre lawn",
+"planted": 0,
+"setting": "Ceremonies beneath redwoods on site or at Old Mill Park, reception in the Cascade Room",
+"capacity": "up to 250",
+"price": "Cascade Room $260-350/hr; Sat 8-hr $3,500-4,800",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/mill-valley-community-center"
+},
+"lat": 37.8988,
+"lon": -122.52835,
+"conf": "verified-fetch"
+},
+{
+"name": "Muir Woods Park Community Association Clubhouse",
+"region": "SF Bay Area",
+"town": "Mill Valley",
+"county": "Marin",
+"address": "40 Ridge Avenue",
+"canopy": "wooded Mt. Tam slope",
+"canopy_full": "wooded Mt. Tam slope on a 2-acre bluff directly above Muir Woods' redwoods",
+"planted": 0,
+"setting": "Rustic community clubhouse and deck overlooking the Muir Woods canyon",
+"capacity": "",
+"price": "$-$$ (HCTG)",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-ideas/stunning-marin-county-wedding-venues"
+},
+"lat": 37.89835,
+"lon": -122.56749,
+"conf": "verified-fetch"
+},
+{
+"name": "Old Mill Park Amphitheatre",
+"region": "SF Bay Area",
+"town": "Mill Valley",
+"county": "Marin",
+"address": "Throckmorton Ave at Cascade Dr",
+"canopy": "old-growth coast redwood grove",
+"canopy_full": "old-growth coast redwood grove",
+"planted": 0,
+"setting": "City-rented outdoor stage/amphitheater ringed by redwoods beside Old Mill Creek and the historic Reed Mill",
+"capacity": "amphitheater ~250",
+"price": "~$133-150/hr + staffing (city rental)",
+"links": {
+"official": "http://www.millvalleyrecreation.org",
+"other": "https://www.marinarts.org/print/venue/4581"
+},
+"lat": 37.91128,
+"lon": -122.56188,
+"conf": "search-only"
+},
+{
+"name": "Presidio Chapel & Chapel of Our Lady",
+"region": "SF Bay Area",
+"town": "San Francisco",
+"county": "San Francisco",
+"address": "130 Fisher Loop, Presidio",
+"canopy": "hillside amid the Presidio's",
+"canopy_full": "hillside amid the Presidio's planted cypress/pine forest",
+"planted": 1,
+"setting": "Historic hillside chapel ceremonies (1864 Chapel of Our Lady for intimate services), reception steps away at Golden Gate Club",
+"capacity": "intimate",
+"price": "",
+"links": {
+"official": "https://presidio.gov/venues/weddings"
+},
+"lat": 37.7995,
+"lon": -122.46201,
+"conf": "verified-fetch"
+},
+{
+"name": "Ralston White Retreat",
+"region": "SF Bay Area",
+"town": "Mill Valley",
+"county": "Marin",
+"address": "2 El Capitan Avenue",
+"canopy": "redwood forest",
+"canopy_full": "redwood forest on 43 acres of Mt. Tamalpais slope",
+"planted": 0,
+"setting": "Ceremony on the heart-shaped lawn ringed by redwoods; cocktails along redwood paths; 1913 Willis Polk mansion, overnight for 35",
+"capacity": "125 outdoor ceremony / 35 overnight",
+"price": "$5,700-$21,950 rental (HCTG)",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/ralston-white-retreat",
+"other": "https://zola.com/wedding-vendors/wedding-venues/ralston-white-retreat"
+},
+"lat": 37.92321,
+"lon": -122.55919,
+"conf": "verified-fetch"
+},
+{
+"name": "Rancho Nicasio",
+"region": "SF Bay Area",
+"town": "Nicasio",
+"county": "Marin",
+"address": "1 Old Rancheria Road",
+"canopy": "pines shading the ceremony",
+"canopy_full": "pines shading the ceremony lawn (HCTG tags redwood ceremonies; listings cite pines/oaks — verify)",
+"planted": 0,
+"setting": "Gazebo/lawn ceremonies behind the historic West Marin roadhouse, reception indoors or on the grand lawn",
+"capacity": "250 ceremony / 300 seated",
+"price": "from ~$5,000 (Zola)",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/rancho-nicasio",
+"theknot": "https://www.theknot.com/marketplace/rancho-nicasio-nicasio-ca-382286",
+"other": "https://zola.com/wedding-vendors/wedding-venues/rancho-nicasio"
+},
+"lat": 38.06225,
+"lon": -122.69832,
+"conf": "verified-fetch"
+},
+{
+"name": "Roberts Regional Recreation Area",
+"region": "SF Bay Area",
+"town": "Oakland",
+"county": "Alameda",
+"address": "10060 Skyline Blvd",
+"canopy": "second-growth coast redwood grove",
+"canopy_full": "second-growth coast redwood grove (adjoins Reinhardt Redwood Regional Park)",
+"planted": 0,
+"setting": "EBRPD wedding reservations at paired redwood-grove picnic sites; leave-no-trace rules, no amplified music",
+"capacity": "picnic-site capacities vary",
+"price": "picnic-site reservation + $5/car parking",
+"links": {
+"official": "https://www.ebparks.org/sites/default/files/Roberts-Wedding-FAQ.pdf"
+},
+"lat": 37.81399,
+"lon": -122.17317,
+"conf": "verified-fetch"
+},
+{
+"name": "SF Botanical Garden — Redwood Grove",
+"region": "SF Bay Area",
+"town": "San Francisco",
+"county": "San Francisco",
+"address": "1199 9th Avenue, Golden Gate Park",
+"canopy": "coast redwood grove encircling",
+"canopy_full": "coast redwood grove encircling fixed benches",
+"planted": 0,
+"setting": "Daytime ceremony in the Redwood Grove (40 seated); larger events at Celebration Garden (400)",
+"capacity": "Redwood Grove 40 seated; Celebration Garden 400",
+"price": "venue rentals ~$1,150-$10,000",
+"links": {
+"official": "https://gggp.org/botanical-garden-event-rentals/",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/san-francisco-botanical-garden"
+},
+"lat": 37.76642,
+"lon": -122.4665,
+"conf": "verified-fetch"
+},
+{
+"name": "Sequoyah Country Club",
+"region": "SF Bay Area",
+"town": "Oakland",
+"county": "Alameda",
+"address": "4550 Heafey Road",
+"canopy": "grounds ringed by giant",
+"canopy_full": "grounds ringed by giant sequoias and pines in the Oakland hills",
+"planted": 0,
+"setting": "Terrace Lawn outdoor ceremonies among the big conifers; Bay View Room reception",
+"capacity": "275 outdoor / 272 seated",
+"price": "from ~$20,561 (Zola)",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/sequoyah-country-club"
+},
+"lat": 37.76526,
+"lon": -122.13318,
+"conf": "search-only"
+},
+{
+"name": "The Outdoor Art Club",
+"region": "SF Bay Area",
+"town": "Mill Valley",
+"county": "Marin",
+"address": "1 West Blithedale Avenue",
+"canopy": "towering coast redwoods",
+"canopy_full": "towering coast redwoods over 1902 landmark garden",
+"planted": 0,
+"setting": "Garden ceremony beneath redwoods at downtown Mill Valley clubhouse",
+"capacity": "140-150",
+"price": "from ~$9,145/50 guests (Wedding Spot)",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/the-outdoor-art-club",
+"other": "https://wedding-spot.com/venue/232/The-Outdoor-Art-Club"
+},
+"lat": 37.90693,
+"lon": -122.54699,
+"conf": "verified-fetch"
+},
+{
+"name": "Trocadero Clubhouse, Stern Grove",
+"region": "SF Bay Area",
+"town": "San Francisco",
+"county": "San Francisco",
+"address": "Sigmund Stern Grove, 19th Ave & Sloat Blvd",
+"canopy": "Stern Grove's eucalyptus-redwood-fir gro",
+"canopy_full": "Stern Grove's eucalyptus-redwood-fir grove; ceremonies held in the redwoods",
+"planted": 0,
+"setting": "1892 landmark clubhouse rental (SF Rec & Park) with outdoor ceremonies in the surrounding grove; restored and rebooking since 2025",
+"capacity": "120 seated / 140 standing",
+"price": "from ~$900 per 6-hr block",
+"links": {
+"official": "https://sfrecpark.org/664/Stern-Grove-Clubhouse"
+},
+"lat": 37.7364,
+"lon": -122.4771,
+"conf": "search-only"
+},
+{
+"name": "UC Botanical Garden — Mather Redwood Grove",
+"region": "SF Bay Area",
+"town": "Berkeley",
+"county": "Alameda",
+"address": "200 Centennial Drive",
+"canopy": "coast redwoods planted",
+"canopy_full": "coast redwoods planted in the 1930s over Townsend Amphitheater",
+"planted": 1,
+"setting": "Ceremony in the redwood-grove amphitheater (closed to visitors during your slot); reception at Julia Morgan Hall",
+"capacity": "200 ceremony; 82 with reception",
+"price": "$3,500-$4,500 ceremony-only; elopements from $1,600",
+"links": {
+"official": "https://botanicalgarden.berkeley.edu/rentals-redwood-grove",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/northern-california/uc-botanical-garden"
+},
+"lat": 37.8755,
+"lon": -122.2387,
+"conf": "verified-fetch"
+},
+{
+"name": "Calamigos Ranch — Birchwood Room",
+"region": "Los Angeles",
+"town": "Malibu",
+"county": "Los Angeles",
+"address": "327 Latigo Canyon Rd, Malibu, CA 90265",
+"canopy": "coast redwood grove",
+"canopy_full": "Planted coast redwood grove with natural waterfall (rest of the 130-acre ranch is oak canopy)",
+"planted": 1,
+"setting": "Ceremony under the Birchwood redwoods beside the waterfall (up to 120); larger oak/waterfall sites for big weddings",
+"capacity": "Birchwood ≤120; ranch to 800",
+"price": "all-inclusive from ~$265/person; venue-only $10k–15k",
+"links": {
+"official": "https://www.calamigosevents.com/weddings",
+"theknot": "https://www.theknot.com/marketplace/calamigos-ranch-malibu-ca-2000500",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/southern-california/calamigos-ranch"
+},
+"lat": 34.09174,
+"lon": -118.81784,
+"conf": "verified-fetch"
+},
+{
+"name": "Earl Burns Miller Japanese Garden",
+"region": "Los Angeles",
+"town": "Long Beach",
+"county": "Los Angeles",
+"address": "1250 Bellflower Blvd, Long Beach, CA 90840",
+"canopy": "Japanese black pines around",
+"canopy_full": "Planted Japanese black pines around the koi pond of a 1.3-acre CSULB campus garden",
+"planted": 1,
+"setting": "Pond-loop ceremonies with two bridges, waterfalls, teahouse; Saturday weddings close the garden to visitors",
+"capacity": "small (1.3-acre garden)",
+"price": "university rental; pricing on request",
+"links": {
+"official": "https://www.csulb.edu/japanese-garden/zen-garden-events",
+"weddingwire": "https://www.weddingwire.com/biz/earl-burns-miller-japanese-garden-long-beach/ec6112000603ea72.html",
+"other": "https://www.csulb.edu/node/626946"
+},
+"lat": 33.7872,
+"lon": -118.1192,
+"conf": "verified-fetch"
+},
+{
+"name": "Rio Hondo by Wedgewood Weddings",
+"region": "Los Angeles",
+"town": "Downey",
+"county": "Los Angeles",
+"address": "10627 Old River School Rd, Downey, CA 90241",
+"canopy": "pines on landscaped golf-club",
+"canopy_full": "Planted pines on landscaped golf-club event grounds beside a tiered waterfall",
+"planted": 1,
+"setting": "Ceremony lawn backed by mature pines on Rio Hondo Golf Club; ballroom reception, all-inclusive packages",
+"capacity": "275",
+"price": "packages from ~$6,840 (Zola)",
+"links": {
+"official": "https://www.wedgewoodweddings.com/riohondo",
+"weddingwire": "https://www.weddingwire.com/biz/rio-hondo-by-wedgewood-wedding/1365fe0155404f6c.html",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/southern-california/rio-hondo-by-wedgewood-weddings",
+"other": "https://www.downeyca.org/our-city/departments/parks-recreation/rio-hondo-golf-club/rio-hondo-event-center"
+},
+"lat": 33.95304,
+"lon": -118.14487,
+"conf": "search-only"
+},
+{
+"name": "Shoseian Whispering Pine Tea House",
+"region": "Los Angeles",
+"town": "Glendale",
+"county": "Los Angeles",
+"address": "1601 W. Mountain St, Glendale, CA 91201",
+"canopy": "Japanese friendship tea garden",
+"canopy_full": "Planted Japanese friendship tea garden — sculpted pines, koi pond and gazebo (Shoseian = 'Whispering Pine')",
+"planted": 1,
+"setting": "City of Glendale rents the tea garden and gazebo for weddings (Fri–Sun); ~100 seated",
+"capacity": "~100 seated",
+"price": "$120/hr + deposit (confirm with city)",
+"links": {
+"official": "https://www.glendaleca.gov/government/departments/community-services-parks/parks-facilities-historic-sites/brand-park/whispering-pine-tea-house-garden",
+"other": "https://www.glendaleteahouse.org/contact"
+},
+"lat": 34.18205,
+"lon": -118.27653,
+"conf": "search-only"
+},
+{
+"name": "Knollwood Country Club",
+"region": "San Fernando Valley",
+"town": "Granada Hills",
+"county": "Los Angeles",
+"address": "12040 Balboa Blvd, Granada Hills, CA 91344",
+"canopy": "pines back the golf-course",
+"canopy_full": "Planted pines back the golf-course ceremony lawn",
+"planted": 1,
+"setting": "Hillside country-club lawn ceremony with pines and fairways behind, clubhouse reception; in-house catering",
+"capacity": "",
+"price": "$ (HCTG budget tier)",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-ideas/best-wedding-venues-the-valleys-los-angeles-county"
+},
+"lat": 34.28928,
+"lon": -118.49895,
+"conf": "verified-fetch"
+},
+{
+"name": "The Japanese Garden (SuihoEn)",
+"region": "San Fernando Valley",
+"town": "Van Nuys",
+"county": "Los Angeles",
+"address": "6100 Woodley Ave, Van Nuys, CA 91406",
+"canopy": "Japanese black pines",
+"canopy_full": "Planted Japanese black pines over the lake of a 6.5-acre strolling garden",
+"planted": 1,
+"setting": "City-run garden rented for weddings — lakeside, teahouse and Shoin building; closed to public Fri/Sat for events",
+"capacity": "inquire",
+"price": "municipal rental, quote on request",
+"links": {
+"official": "https://thejapanesegarden.com/",
+"other": "https://www.atlasobscura.com/places/japanese-garden-at-the-donald-c-tillman-water-reclamation-plant"
+},
+"lat": 34.18007,
+"lon": -118.48263,
+"conf": "verified-fetch"
+},
+{
+"name": "Storrier Stearns Japanese Garden",
+"region": "San Gabriel Valley",
+"town": "Pasadena",
+"county": "Los Angeles",
+"address": "270 Arlington Dr, Pasadena, CA 91105",
+"canopy": "1930s Japanese stroll garden",
+"canopy_full": "Planted 1930s Japanese stroll garden: black pines among maples over two ponds and a 25-ft waterfall",
+"planted": 1,
+"setting": "NRHP-listed hidden garden; ceremonies beside the ponds and Niko-an teahouse, receptions on terraces",
+"capacity": "120 seated / 150",
+"price": "inquire",
+"links": {
+"official": "https://japanesegardenpasadena.com/venue.html",
+"other": "https://tclf.org/landscapes/storrier-stearns-japanese-garden"
+},
+"lat": 34.12786,
+"lon": -118.15574,
+"conf": "verified-fetch"
+},
+{
+"name": "Creekside Lodge Mt. Baldy",
+"region": "Angeles Forest & Mt Baldy",
+"town": "Mt Baldy",
+"county": "San Bernardino",
+"address": "6870 Mt. Baldy Rd, Mt Baldy, CA 91759",
+"canopy": "canyon conifers",
+"canopy_full": "Native canyon conifers — lodge tucked against the pines, bigcone Douglas-fir slopes above",
+"planted": 0,
+"setting": "Ceremony, cocktail hour and dinner-dance at a 1906 lodge beside creek, pines and ridgeline trails",
+"capacity": "80–100 ideal; up to 120",
+"price": "inquire",
+"links": {
+"official": "https://creeksidelodgemtbaldy.com/"
+},
+"lat": 34.2385,
+"lon": -117.65527,
+"conf": "verified-fetch"
+},
+{
+"name": "Mountain High Resort",
+"region": "Angeles Forest & Mt Baldy",
+"town": "Wrightwood",
+"county": "Los Angeles",
+"address": "24510 State Hwy 2, Wrightwood, CA 92397",
+"canopy": "Jeffrey pine forest",
+"canopy_full": "Native Jeffrey pine forest in Angeles National Forest",
+"planted": 0,
+"setting": "Ski-resort ceremony at East Base lawn or the forest Amphitheater inside a Jeffrey pine grove (up to 200); receptions at East Base or North Lodge",
+"capacity": "up to 200",
+"price": "$3,500 ceremony-location fee + catering (2023 brochure)",
+"links": {
+"official": "https://www.mthigh.com/site/mountain/events-and-activities/~wedding/",
+"weddingwire": "https://www.weddingwire.com/biz/mountain-high-resort/b0079e6737542ced.html",
+"other": "https://www.mthigh.com/site/mountain/events-and-activities/wedding-brochure-6-23.pdf"
+},
+"lat": 34.37664,
+"lon": -117.69117,
+"conf": "verified-fetch"
+},
+{
+"name": "Sunshine Loft",
+"region": "Angeles Forest & Mt Baldy",
+"town": "Wrightwood",
+"county": "San Bernardino",
+"address": "Wrightwood, CA 92397",
+"canopy": "Wrightwood village",
+"canopy_full": "Wrightwood village at ~6,000 ft inside the Angeles NF Jeffrey-pine belt",
+"planted": 0,
+"setting": "Micro-wedding on a private loft deck in the village (~20 seated); raw space, BYO vendors; sleeps 7",
+"capacity": "20 seated / 30 standing",
+"price": "$100/hr, 4-hr minimum",
+"links": {
+"other": "https://zola.com/wedding-vendors/wedding-venues/sunshine-loft"
+},
+"lat": 34.36298,
+"lon": -117.63743,
+"conf": "search-only"
+},
+{
+"name": "Pines Park",
+"region": "Orange County",
+"town": "Dana Point",
+"county": "Orange",
+"address": "34941 Camino Capistrano, Dana Point, CA 92624",
+"canopy": "mature blufftop pine grove",
+"canopy_full": "Planted mature blufftop pine grove (1920s Doheny-era), city historic site",
+"planted": 1,
+"setting": "Ceremony-only on blufftop lawns under planted pines above Capistrano Beach, via City of Dana Point park permit; no receptions",
+"capacity": "small ceremonies by permit",
+"price": "$50 application + city reservation fees",
+"links": {
+"official": "https://www.danapoint.org/Community/Parks-Trails/Pines-Park",
+"other": "https://orangecountybeachweddings.com/pines-park/"
+},
+"lat": 33.45502,
+"lon": -117.66493,
+"conf": "verified-fetch"
+},
+{
+"name": "Arrowhead Pine Rose Weddings & Cabins",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Twin Peaks",
+"county": "San Bernardino",
+"address": "25994 State Highway 189, Twin Peaks, CA 92391",
+"canopy": "Cedars and pines",
+"canopy_full": "Cedars and pines across 26–28 private acres",
+"planted": 0,
+"setting": "Creekside log gazebo at 'Hidden Creek' reached by greenery-draped log trellis, ringed by cedars/pines, pond beside; 16 cabins + 4 lodges sleep ~135",
+"capacity": "175 seated outdoors",
+"price": "Elopements $1,095–1,295; micro-weddings $10,875–16,975; full packages from ~$23,475",
+"links": {
+"official": "https://pineroseweddings.com/",
+"weddingwire": "https://weddingwire.com/biz/arrowhead-pine-rose/f420ca6d6abd91a5.html",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/southern-california/pine-rose-weddings"
+},
+"lat": 34.23656,
+"lon": -117.24245,
+"conf": "verified-fetch"
+},
+{
+"name": "Big Bear Mountain Resort Weddings",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Big Bear Lake",
+"county": "San Bernardino",
+"address": "880 Summit Blvd, Big Bear Lake, CA 92315",
+"canopy": "Ski-mountain Jeffrey pine/fir forest",
+"canopy_full": "Ski-mountain Jeffrey pine/fir forest; secluded forest sites at Top of Chair 2 and Deer Meadow",
+"planted": 0,
+"setting": "Chairlift-accessed summit and in-forest ceremony sites (Skyline Taphouse, Top of Chair 2/9, Deer Meadow) plus meadows and decks; May–Oct",
+"capacity": "varies by site (12 venues)",
+"price": "inquiry",
+"links": {
+"official": "https://www.bigbearmountainresort.com/wedding/venues",
+"weddingwire": "https://www.weddingwire.com/biz/big-bear-mountain-resort-weddings/cbbe15a295561a5f.html",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/southern-california/big-bear-mountain-resort"
+},
+"lat": 34.23649,
+"lon": -116.88842,
+"conf": "verified-fetch"
+},
+{
+"name": "Chateau Big Bear Boutique Hotel",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Big Bear Lake",
+"county": "San Bernardino",
+"address": "Big Bear Lake, CA",
+"canopy": "Garden ceremony area set",
+"canopy_full": "Garden ceremony area set among rows of pines",
+"planted": 0,
+"setting": "Pine-garden outdoor ceremony plus indoor ballroom receptions at a boutique hotel",
+"capacity": "up to 120",
+"price": "from ~$6,000",
+"links": {
+"other": "https://www.wedding-spot.com/venue/11593/chateau-big-bear-boutique-hotel/"
+},
+"lat": 34.25336,
+"lon": -116.93217,
+"conf": "search-only"
+},
+{
+"name": "Gold Mountain Manor",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Big Bear City",
+"county": "San Bernardino",
+"address": "1117 Anita Avenue, Big Bear City, CA 92314",
+"canopy": "Ancient ponderosa pines",
+"canopy_full": "Ancient ponderosa pines over ~1 acre of gardens at a 1928 log-mansion B&B",
+"planted": 0,
+"setting": "Wooden arch on the lawn beneath ponderosas, fairy lights in the pines at night; candlelit indoor option",
+"capacity": "120 outdoor / 30 indoor; lodging ~18",
+"price": "packages $6,550–12,850; ceremony-only $1,850–3,100",
+"links": {
+"official": "https://www.goldmountainmanor.com/weddings-and-events-in-big-bear-lake.htm",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/southern-california/gold-mountain-manor"
+},
+"lat": 34.27023,
+"lon": -116.84885,
+"conf": "verified-fetch"
+},
+{
+"name": "Holcomb Valley Ranch",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Fawnskin",
+"county": "San Bernardino",
+"address": "34300 Holcomb Valley Road, Fawnskin, CA 92333",
+"canopy": "Jeffrey-pine-rimmed historic gold-rush v",
+"canopy_full": "Jeffrey-pine-rimmed historic gold-rush valley meadows, ~400 off-grid acres",
+"planted": 0,
+"setting": "Open-air reception barn and meadow ceremony sites; BYO catering/alcohol, 10 pm curfew, no cell service (property listed for sale — verify operator)",
+"capacity": "up to 500",
+"price": "BYO venue; fees unpublished",
+"links": {
+"weddingwire": "https://weddingwire.com/biz/holcomb-valley-ranch/12e3eb55d51fe17e.html",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/southern-california/holcomb-valley-ranch"
+},
+"lat": 34.29818,
+"lon": -116.91247,
+"conf": "search-only"
+},
+{
+"name": "Knickerbocker Mansion",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Big Bear Lake",
+"county": "San Bernardino",
+"address": "869 Knickerbocker Road, Big Bear Lake, CA 92315",
+"canopy": "Wooded ~2.5-acre grounds",
+"canopy_full": "Wooded ~2.5-acre grounds of a 1920 hand-built log mansion in Big Bear's pine zone",
+"planted": 0,
+"setting": "Turf-lawn or courtyard ceremonies; three houses sleep 33 for weekend-long weddings (note: estate marketed for sale)",
+"capacity": "~100; patio 75",
+"price": "confirm — listings dated",
+"links": {
+"weddingwire": "https://weddingwire.com/biz/knickerbocker-mansion/41f0c6c20f106e1f.html",
+"other": "https://www.bigbear.com/directory/knickerbocker-mansion-wedding-venues/"
+},
+"lat": 34.2366,
+"lon": -116.90992,
+"conf": "search-only"
+},
+{
+"name": "Lake Arrowhead Resort & Spa",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Lake Arrowhead",
+"county": "San Bernardino",
+"address": "27984 Highway 189, Lake Arrowhead, CA 92352",
+"canopy": "Towering pines bordering lakefront",
+"canopy_full": "Towering pines bordering lakefront resort lawn",
+"planted": 0,
+"setting": "Lakeside ceremony on Lake Arrowhead surrounded by tall pines; ballroom receptions at AAA Four Diamond resort",
+"capacity": "",
+"price": "Lake's Edge elopement: $1,000 site fee + $105/person",
+"links": {
+"official": "https://www.lakearrowheadresort.com/lake_arrowhead_weddings",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/southern-california/lake-arrowhead-resort-and-spa"
+},
+"lat": 34.25081,
+"lon": -117.19247,
+"conf": "verified-fetch"
+},
+{
+"name": "Miller's Landing",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Lake Arrowhead",
+"county": "San Bernardino",
+"address": "Lake Arrowhead, CA",
+"canopy": "Lawns ringed by tall",
+"canopy_full": "Lawns ringed by tall pines and cedars (former garden nursery)",
+"planted": 0,
+"setting": "All-inclusive garden-lawn ceremony framed by pine and cedar trees near the lake",
+"capacity": "up to 180",
+"price": "from ~$23,000 all-inclusive",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-ideas/all-inclusive-big-bear-lake-arrowhead-wedding-venues",
+"other": "https://zola.com/wedding-vendors/wedding-venues/miller-s-landing"
+},
+"lat": 34.25717,
+"lon": -117.19089,
+"conf": "verified-fetch"
+},
+{
+"name": "Pali Mountain Weddings (Pali Retreat)",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Running Springs",
+"county": "San Bernardino",
+"address": "30778 Highway 18, Running Springs, CA 92382",
+"canopy": "250+ acres of maintained",
+"canopy_full": "250+ acres of maintained pine forest between Lake Arrowhead and Big Bear",
+"planted": 0,
+"setting": "'Enchanted forest' clearing (to 70), treetop deck (50), and large lawns at a camp-style retreat with cabins",
+"capacity": "up to 600 outdoor / 400 indoor",
+"price": "venue fee from $3,500 + $59/pp F&B minimum",
+"links": {
+"weddingwire": "https://weddingwire.com/biz/pali-mountain-weddings/0092b1caa352fe86.html",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/southern-california/pali-mountain-weddings"
+},
+"lat": 34.2228,
+"lon": -117.13142,
+"conf": "search-only"
+},
+{
+"name": "San Moritz Lodge",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Crestline",
+"county": "San Bernardino",
+"address": "24640 San Moritz Drive, Crestline, CA 92325",
+"canopy": "Cedar-and-pine forest at Lake",
+"canopy_full": "Cedar-and-pine forest at Lake Gregory; a 125-ft cedar stands over the ceremony lawn",
+"planted": 0,
+"setting": "Lakefront lawn facing Lake Gregory for ceremonies; historic timber-beamed chalet ballroom for receptions",
+"capacity": "250 outdoor / 200 indoor",
+"price": "$23,500–29,500 (100 guests) + $85–95/pp",
+"links": {
+"official": "https://www.lakegregory.com/weddings",
+"weddingwire": "https://www.weddingwire.com/biz/san-moritz-lodge/b24bd9e3ee18e232.html",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/southern-california/san-moritz-lodge"
+},
+"lat": 34.239,
+"lon": -117.26619,
+"conf": "verified-fetch"
+},
+{
+"name": "Sessions Retreat & Hotel",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Big Bear Lake",
+"county": "San Bernardino",
+"address": "41421 Big Bear Blvd, Big Bear Lake, CA 92315",
+"canopy": "Towering pines over woodsy",
+"canopy_full": "Towering pines over woodsy boutique-hotel grounds",
+"planted": 0,
+"setting": "Outdoor ceremony with forest backdrop; ~3,000 sq ft hall; exclusive-use buyout with 27–35 rooms",
+"capacity": "100",
+"price": "$7,200–8,640 per event",
+"links": {
+"theknot": "https://www.theknot.com/marketplace/sessions-retreat-and-hotel-big-bear-lake-ca-2079205",
+"weddingwire": "https://weddingwire.com/biz/sessions-retreat/28ebcb35b5b176d6.html",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/southern-california/sessions-retreat-and-hotel"
+},
+"lat": 34.24343,
+"lon": -116.89895,
+"conf": "verified-fetch"
+},
+{
+"name": "SkyPark Weddings at Santa's Village",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Skyforest",
+"county": "San Bernardino",
+"address": "28950 Highway 18, Skyforest, CA 92385",
+"canopy": "pine/cedar/fir",
+"canopy_full": "Native pine/cedar/fir — 150 acres inside San Bernardino National Forest",
+"planted": 0,
+"setting": "Chapel of the Little Shepherd, forest-meadow or creekside ceremony sites in the woods of the vintage Santa's Village park (weddings May–Oct)",
+"capacity": "~250 per Zola listing; 190-guest wedding in reviews",
+"price": "Zola lists from ~$10,495; WeddingWire shows $1,800 start — confirm with venue",
+"links": {
+"official": "https://skyparkweddings.com",
+"other": "https://thealpinemountaineer.com/2026/01/22/skypark-at-santas-village-kicks-off-fantasy-forest-nights/"
+},
+"lat": 34.23129,
+"lon": -117.16521,
+"conf": "verified-fetch"
+},
+{
+"name": "The Outpost",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Fawnskin",
+"county": "San Bernardino",
+"address": "Fawnskin, CA 92333",
+"canopy": "Tall pines encircle",
+"canopy_full": "Tall pines encircle the site on Big Bear Lake's north shore",
+"planted": 0,
+"setting": "Raw-space outdoor ceremony, cocktail and reception areas among the pines; five on-site cabins; outside catering",
+"capacity": "125 seated",
+"price": "",
+"links": {
+"other": "https://zola.com/wedding-vendors/wedding-venues/the-outpost--2"
+},
+"lat": 34.26939,
+"lon": -116.94169,
+"conf": "search-only"
+},
+{
+"name": "The Tudor House",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Lake Arrowhead",
+"county": "San Bernardino",
+"address": "800 Arrowhead Villa Road, Lake Arrowhead, CA 92352",
+"canopy": "Historic 1928 lodge grounds",
+"canopy_full": "Historic 1928 lodge grounds in Lake Arrowhead's pine belt",
+"planted": 0,
+"setting": "Grand Hall (vaulted ceilings, stone fireplace, stage) or outdoor grounds; lodging buyout of adjacent Bracken Fern Manor",
+"capacity": "up to 100",
+"price": "~$5,000–5,950 for 50 guests",
+"links": {
+"weddingwire": "https://m.weddingwire.com/biz/the-tudor-house-lake-arrowhead/d390ef771dfc9cab",
+"other": "https://wedding-spot.com/venue/2140/The-Tudor-House"
+},
+"lat": 34.23878,
+"lon": -117.18612,
+"conf": "search-only"
+},
+{
+"name": "Thousand Pines Camp & Conference Center",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Crestline",
+"county": "San Bernardino",
+"address": "359 Thousand Pines Road, Crestline, CA 92325",
+"canopy": "~250 acres of pine",
+"canopy_full": "~250 acres of pine forest at ~5,000 ft in San Bernardino National Forest",
+"planted": 0,
+"setting": "McKee or Jensen chapels, open fields, amphitheaters; Christian camp (ask about faith requirements), on-site lodging and chef",
+"capacity": "",
+"price": "brochure via venue",
+"links": {
+"official": "https://thousandpines.com/weddings",
+"theknot": "https://real-weddings.theknot.com/real-weddings/a-natural-rustic-wedding-at-thousand-pines-christian-camp-and-conference-center-in-thousand-pines-california-album"
+},
+"lat": 34.24717,
+"lon": -117.27909,
+"conf": "verified-fetch"
+},
+{
+"name": "UCLA Lake Arrowhead Lodge",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Lake Arrowhead",
+"county": "San Bernardino",
+"address": "850 Willow Creek Road, Lake Arrowhead, CA 92352",
+"canopy": "Wooded 50-acre lodge campus",
+"canopy_full": "Wooded 50-acre lodge campus in the San Bernardino Mtns",
+"planted": 0,
+"setting": "Ceremonies on lodge grounds/chalet decks; micro-weddings up to 3-day exclusive full-property buyouts",
+"capacity": "groups 10–200",
+"price": "exclusive-use packages from $165,000; WeddingWire start ~$24,434",
+"links": {
+"official": "https://www.hospitality.ucla.edu/?p=120",
+"other": "https://alumni.ucla.edu/?p=636"
+},
+"lat": 34.26567,
+"lon": -117.18698,
+"conf": "verified-fetch"
+},
+{
+"name": "Willow Woods Park",
+"region": "San Bernardino Mtns (bonus)",
+"town": "Skyforest",
+"county": "San Bernardino",
+"address": "28561 Highway 18, Skyforest, CA 92385",
+"canopy": "Restored logging-camp grounds",
+"canopy_full": "Restored logging-camp grounds: redwoods (planted), old oaks, pines and dogwoods",
+"planted": 1,
+"setting": "Vows beside a rock waterfall, in a log chapel, or under the trees a mile from Lake Arrowhead",
+"capacity": "up to 85",
+"price": "HCTG packages from ~$1,000",
+"links": {
+"hctg": "https://www.herecomestheguide.com/wedding-venues/southern-california/willow-woods-park",
+"other": "https://www.wedding-spot.com/venue/3289/willow-woods-park"
+},
+"lat": 34.23529,
+"lon": -117.18048,
+"conf": "verified-fetch"
+},
+{
+"name": "Chalet Tournesol",
+"region": "Idyllwild (bonus)",
+"town": "Mountain Center",
+"county": "Riverside",
+"address": "McCall Park Road, Mountain Center, CA 92561",
+"canopy": "Pine-covered 10-acre San Jacinto",
+"canopy_full": "Pine-covered 10-acre San Jacinto Mountains estate with woodland paths",
+"planted": 0,
+"setting": "European-style chapel (to 60) or Japanese-garden outdoor area (~50 seated) on a private estate",
+"capacity": "chapel 60; garden ~50–60 seated",
+"price": "chapel from $150/hr; estate from $250/hr",
+"links": {
+"theknot": "https://www.theknot.com/marketplace/chalet-tournesol-mountain-center-ca-2088664",
+"other": "https://www.tagvenue.com/us/venues/mountain-center/70066/chalet-tournesol"
+},
+"lat": 33.71258,
+"lon": -116.72973,
+"conf": "search-only"
+},
+{
+"name": "Harvey House",
+"region": "Idyllwild (bonus)",
+"town": "Pine Cove",
+"county": "Riverside",
+"address": "54420 S Circle Dr, Idyllwild-Pine Cove, CA 92549",
+"canopy": "Natural cathedral of soaring",
+"canopy_full": "Natural cathedral of soaring redwoods (planted grove) amid Pine Cove pine forest",
+"planted": 1,
+"setting": "Elevated ceremony stage beneath the redwoods or in the meadow; banquet hall and six guest rooms",
+"capacity": "150 outdoor / 55 indoor",
+"price": "rental $2,195–8,995 + $115–170/pp; elopements from $7,499",
+"links": {
+"official": "https://www.harveyhouseidy.com/",
+"weddingwire": "https://www.weddingwire.com/biz/harvey-house/58130b7c0fa760cd.html",
+"hctg": "https://www.herecomestheguide.com/wedding-venues/southern-california/harvey-house"
+},
+"lat": 33.74209,
+"lon": -116.71239,
+"conf": "verified-fetch"
+},
+{
+"name": "Orchard Strong Cabin",
+"region": "Idyllwild (bonus)",
+"town": "Idyllwild",
+"county": "Riverside",
+"address": "Idyllwild, CA 92549",
+"canopy": "Log cabin in Idyllwild's",
+"canopy_full": "Log cabin in Idyllwild's mixed-conifer town forest",
+"planted": 0,
+"setting": "Private couple-designed micro-ceremonies, elopements and vow renewals at a log-cabin property",
+"capacity": "2–15 typical",
+"price": "~$3,500 start",
+"links": {
+"theknot": "https://www.theknot.com/marketplace/orchard-strong-cabin-idyllwild-ca-2104576"
+},
+"lat": 33.74787,
+"lon": -116.71651,
+"conf": "search-only"
+},
+{
+"name": "Tahquitz Pines Conference & Retreat Center",
+"region": "Idyllwild (bonus)",
+"town": "Idyllwild",
+"county": "Riverside",
+"address": "55251 S. Circle Dr., Idyllwild, CA 92549",
+"canopy": "Towering Idyllwild pines",
+"canopy_full": "Towering Idyllwild pines, mile-high in the San Jacinto Mountains",
+"planted": 0,
+"setting": "Event Lawn and Amphitheater among the pines with forest trails; retreat cabins and cottages lodge the wedding party",
+"capacity": "groups of any size (confirm)",
+"price": "~$2,000 start (confirm)",
+"links": {
+"official": "https://tahquitzpines.com"
+},
+"lat": 33.74984,
+"lon": -116.7029,
+"conf": "verified-fetch"
+}
+]
