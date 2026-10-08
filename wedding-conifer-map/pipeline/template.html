@@ -1,0 +1,453 @@
+<title>Married Under Conifers</title>
+<meta name="description" content="California wedding venues in or beside conifer canopy, mapped against LANDFIRE land cover.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700&family=Archivo+Narrow:wght@500;600&display=swap">
+<style>
+/*__MAPLIBRE_CSS__*/
+</style>
+<style>
+/* Layout: full-bleed map sheet; header strip as map marginalia; venue index as a left gazetteer panel (bottom sheet on phones); legend card lower-right like a quad-map collar. */
+:root{
+  --paper:#f3f1e8;        /* map sheet */
+  --ocean:#d3e0e2;
+  --land:#eceadf;
+  --ink:#232a22;          /* primary text */
+  --ink-soft:#5c6457;
+  --line:#c9c6b6;         /* neatlines, county boundaries */
+  --panel:#faf9f3;
+  --panel-edge:#d8d5c5;
+  --canopy-mixed:#bccfa4;
+  --canopy-conifer:#7fa87b;
+  --canopy-redwood:#3f7259;
+  --dot:#c0392f;          /* topo revision red */
+  --dot-ring:#f3f1e8;
+  --dot-hot:#8e2a22;
+  --accent:#3f7259;
+  --chip-on:#2f4a3c;
+  --chip-on-fg:#f3f1e8;
+  --shadow:0 2px 14px rgba(35,42,34,.18);
+  --label-halo:rgba(243,241,232,.85);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121611; --ocean:#101c21; --land:#171b14;
+    --ink:#e7e4d4; --ink-soft:#a7ad99; --line:#39402f;
+    --panel:#1a1f17; --panel-edge:#343b2c;
+    --canopy-mixed:#2c3a26; --canopy-conifer:#476b44; --canopy-redwood:#2e6b52;
+    --dot:#ff6a52; --dot-ring:#121611; --dot-hot:#ffb199;
+    --accent:#7fc9a2; --chip-on:#7fc9a2; --chip-on-fg:#10140d;
+    --shadow:0 2px 14px rgba(0,0,0,.5);
+    --label-halo:rgba(18,22,17,.85);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121611; --ocean:#101c21; --land:#171b14;
+  --ink:#e7e4d4; --ink-soft:#a7ad99; --line:#39402f;
+  --panel:#1a1f17; --panel-edge:#343b2c;
+  --canopy-mixed:#2c3a26; --canopy-conifer:#476b44; --canopy-redwood:#2e6b52;
+  --dot:#ff6a52; --dot-ring:#121611; --dot-hot:#ffb199;
+  --accent:#7fc9a2; --chip-on:#7fc9a2; --chip-on-fg:#10140d;
+  --shadow:0 2px 14px rgba(0,0,0,.5);
+  --label-halo:rgba(18,22,17,.85);
+  color-scheme:dark;
+}
+html,body{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.45 Archivo,system-ui,sans-serif;overflow:hidden}
+#app{height:100%;display:flex;flex-direction:column}
+
+header{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding:10px 16px 8px;border-bottom:1.5px solid var(--line);background:var(--panel)}
+header h1{font:400 26px/1 "Instrument Serif",Georgia,serif;margin:0;letter-spacing:.2px}
+header h1 em{color:var(--accent)}
+header .sub{color:var(--ink-soft);font-size:12.5px}
+header .count{margin-left:auto;font-size:12px;color:var(--ink-soft);letter-spacing:.04em;text-transform:uppercase}
+header .count b{color:var(--ink);font-weight:700}
+
+#controls{display:flex;gap:8px;align-items:center;padding:8px 16px;border-bottom:1.5px solid var(--line);background:var(--panel);flex-wrap:wrap}
+#chips{display:flex;gap:6px;flex-wrap:wrap;min-width:0}
+.chip{white-space:nowrap;border:1px solid var(--panel-edge);background:transparent;color:var(--ink-soft);border-radius:999px;padding:4px 11px;font:500 12px Archivo,sans-serif;cursor:pointer}
+.chip:hover{border-color:var(--accent);color:var(--ink)}
+.chip.on{background:var(--chip-on);border-color:var(--chip-on);color:var(--chip-on-fg)}
+.chip .n{opacity:.7;font-weight:400}
+#search{margin-left:auto;border:1px solid var(--panel-edge);background:var(--paper);color:var(--ink);border-radius:8px;padding:6px 10px;font:400 13px Archivo,sans-serif;width:200px;max-width:44vw}
+#search:focus{outline:2px solid var(--accent);outline-offset:1px}
+.jump{border:1px solid var(--panel-edge);background:var(--paper);color:var(--ink);border-radius:8px;padding:5px 10px;font:600 12px Archivo,sans-serif;cursor:pointer;white-space:nowrap}
+.jump:hover{border-color:var(--accent)}
+
+#main{flex:1;display:flex;min-height:0;position:relative}
+#list{width:320px;min-width:0;flex:0 0 320px;overflow-y:auto;border-right:1.5px solid var(--line);background:var(--panel);scrollbar-width:thin}
+.rgroup{padding:0 0 4px}
+.rhead{position:sticky;top:0;background:var(--panel);padding:10px 14px 4px;font:600 11px Archivo,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-soft);border-bottom:1px solid var(--panel-edge);z-index:1}
+.vrow{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--panel-edge);padding:9px 14px;cursor:pointer;color:var(--ink)}
+.vrow:hover,.vrow.sel{background:color-mix(in srgb, var(--accent) 12%, transparent)}
+.vrow .vn{font:400 16.5px/1.2 "Instrument Serif",Georgia,serif}
+.vrow .vt{font-size:12px;color:var(--ink-soft);margin-top:1px}
+.vrow .vc{display:inline-block;margin-top:3px;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);border:1px solid color-mix(in srgb, var(--accent) 45%, transparent);border-radius:4px;padding:1px 5px}
+.vrow .vc.planted{color:var(--ink-soft);border-color:var(--panel-edge)}
+
+#map{flex:1;min-width:0;background:var(--ocean)}
+.maplibregl-canvas{outline:none}
+.maplibregl-ctrl-group{background:var(--panel);box-shadow:var(--shadow)}
+.maplibregl-ctrl-group button{background-color:var(--panel)}
+.maplibregl-ctrl-group button + button{border-top:1px solid var(--panel-edge)}
+.maplibregl-ctrl button .maplibregl-ctrl-icon{filter:none}
+:root[data-theme="dark"] .maplibregl-ctrl button .maplibregl-ctrl-icon{filter:invert(.9)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .maplibregl-ctrl button .maplibregl-ctrl-icon{filter:invert(.9)}}
+.maplibregl-ctrl-scale{background:transparent;border-color:var(--ink-soft);color:var(--ink-soft);font:500 10px "Archivo Narrow",Archivo,sans-serif}
+.maplibregl-ctrl-attrib{background:color-mix(in srgb, var(--panel) 80%, transparent);color:var(--ink-soft);font-size:10px}
+.maplibregl-ctrl-attrib a{color:var(--ink-soft)}
+
+/* quad-collar legend */
+#legend{position:absolute;right:10px;bottom:26px;z-index:5;background:var(--panel);border:1.5px solid var(--line);border-radius:6px;box-shadow:var(--shadow);padding:10px 12px 8px;width:188px;font-size:11.5px}
+#legend h3{margin:0 0 6px;font:600 10.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+#legend .row{display:flex;align-items:center;gap:8px;margin:4px 0}
+#legend .sw{width:18px;height:12px;border-radius:2px;flex:0 0 18px;border:1px solid rgba(0,0,0,.12)}
+#legend .dotkey{width:12px;height:12px;border-radius:50%;flex:0 0 12px;margin:0 3px}
+#legend .datum{margin-top:7px;padding-top:6px;border-top:1px solid var(--panel-edge);color:var(--ink-soft);font:500 9.5px/1.5 "Archivo Narrow",Archivo,sans-serif;letter-spacing:.03em}
+#legend .lgtoggle{all:unset;cursor:pointer;float:right;color:var(--ink-soft);font-size:13px;line-height:1}
+
+/* popup */
+.maplibregl-popup{max-width:320px !important;z-index:7}
+.maplibregl-popup-content{background:var(--panel);color:var(--ink);border:1.5px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:13px 15px 12px;font:13px/1.45 Archivo,sans-serif}
+.maplibregl-popup-close-button{color:var(--ink-soft);font-size:18px;padding:2px 7px}
+.maplibregl-popup-tip{border-top-color:var(--line) !important;border-bottom-color:var(--line) !important}
+.pp h2{margin:0 2px 1px 0;font:400 21px/1.15 "Instrument Serif",Georgia,serif}
+.pp .where{color:var(--ink-soft);font-size:12px}
+.pp .canopy{display:inline-block;margin:6px 0 2px;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);border:1px solid color-mix(in srgb, var(--accent) 45%, transparent);border-radius:4px;padding:1px 6px}
+.pp .canopy.planted{color:var(--ink-soft);border-color:var(--panel-edge)}
+.pp .set{margin:5px 0 8px;font-size:12.5px}
+.pp .links{display:flex;flex-wrap:wrap;gap:6px}
+.pp .links a{display:inline-block;background:var(--chip-on);color:var(--chip-on-fg);text-decoration:none;border-radius:6px;padding:4px 9px;font:600 11.5px Archivo,sans-serif}
+.pp .links a.alt{background:transparent;color:var(--ink);border:1px solid var(--panel-edge)}
+.pp .links a.alt:hover{border-color:var(--accent)}
+.pp .addr{margin-top:8px;color:var(--ink-soft);font-size:11px;user-select:all}
+
+/* city labels */
+.citylab{pointer-events:none;font:600 11px/1 "Archivo Narrow",Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);text-shadow:0 0 3px var(--label-halo),0 0 5px var(--label-halo),0 0 7px var(--label-halo);transform:translate(-50%,-50%)}
+.citylab.min{font-size:9.5px;letter-spacing:.1em;opacity:.85}
+
+#sheetbtn{display:none}
+footer{display:none}
+
+@media (max-width:760px){
+  header{padding:8px 16px 6px}
+  header h1{font-size:21px}
+  header .count{display:none}
+  #controls{padding:6px 16px;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
+  #controls>*{flex:0 0 auto}
+  #search{margin-left:0;width:150px}
+  #chips{flex-wrap:nowrap}
+  #search{min-width:130px}
+  #list{position:absolute;left:0;right:0;bottom:0;top:auto;max-height:46%;width:auto;flex:none;z-index:6;border-right:0;border-top:1.5px solid var(--line);transform:translateY(100%);transition:transform .25s ease;border-radius:12px 12px 0 0}
+  #list.open{transform:none}
+  @media (prefers-reduced-motion: reduce){#list{transition:none}}
+  #sheetbtn{display:block;position:absolute;left:50%;transform:translateX(-50%);bottom:calc(34px + env(safe-area-inset-bottom,0px));z-index:7;background:var(--chip-on);color:var(--chip-on-fg);border:0;border-radius:999px;padding:9px 16px;font:600 13px Archivo,sans-serif;box-shadow:var(--shadow);cursor:pointer}
+  #legend{left:8px;right:auto;bottom:auto;top:8px;width:160px}
+  #legend.collapsed .row,#legend.collapsed .datum{display:none}
+}
+</style>
+
+<div id="app">
+  <header>
+    <h1>Married <em>under</em> conifers</h1>
+    <span class="sub">California wedding venues set in pine, cedar, fir &amp; redwood canopy — Bay Area &amp; Southern California</span>
+    <span class="count"><b id="nshown">0</b> of <span id="ntotal">0</span> venues</span>
+  </header>
+  <div id="controls">
+    <button class="jump" id="jumpBay" type="button">⤢ Bay Area</button>
+    <button class="jump" id="jumpSocal" type="button">⤢ SoCal</button>
+    <div id="chips"></div>
+    <input id="search" type="search" placeholder="Search venue or town…" aria-label="Search venues">
+  </div>
+  <div id="main">
+    <nav id="list" aria-label="Venue index"></nav>
+    <div id="map" role="application" aria-label="Map of conifer canopy and wedding venues"></div>
+    <div id="legend">
+      <button class="lgtoggle" id="lgtoggle" type="button" aria-label="Collapse legend">–</button>
+      <h3>Legend</h3>
+      <div class="row"><span class="sw" style="background:var(--canopy-redwood)"></span>Redwood forest</div>
+      <div class="row"><span class="sw" style="background:var(--canopy-conifer)"></span>Conifer forest</div>
+      <div class="row"><span class="sw" style="background:var(--canopy-mixed)"></span>Conifer–hardwood mix</div>
+      <div class="row"><span class="dotkey" style="background:var(--dot)"></span>Venue, native canopy</div>
+      <div class="row"><span class="dotkey" style="background:transparent;border:2.5px solid var(--dot)"></span>Venue, planted grove</div>
+      <div class="datum">LANDFIRE LF2025 EVT · 30 m<br>USGS–USFS · WGS84 · Census TIGER<br>Canopy mapped inside dashed extents<br>Compiled Oct 2026</div>
+    </div>
+    <button id="sheetbtn" type="button">Venue index</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
+<script id="d-land" type="application/json">__LAND__</script>
+<script id="d-counties" type="application/json">__COUNTIES__</script>
+<script id="d-canopy-bay" type="application/json">__CANOPY_BAY__</script>
+<script id="d-canopy-socal" type="application/json">__CANOPY_SOCAL__</script>
+<script id="d-venues" type="application/json">__VENUES__</script>
+<script>
+"use strict";
+const $=s=>document.querySelector(s);
+const J=id=>JSON.parse(document.getElementById(id).textContent);
+const LAND=J('d-land'), COUNTIES=J('d-counties'), CBAY=J('d-canopy-bay'), CSOCAL=J('d-canopy-socal'), VEN=J('d-venues');
+
+const REGIONS=["Santa Cruz Mountains","SF Bay Area","Los Angeles","San Fernando Valley","San Gabriel Valley","Angeles Forest & Mt Baldy","Orange County","Ventura & Ojai","San Bernardino Mtns (bonus)","Idyllwild (bonus)"];
+const CITIES=[
+ ["San Francisco",-122.4194,37.7749,1],["Oakland",-122.2712,37.8044,1],["San Jose",-121.8863,37.3382,1],
+ ["Santa Cruz",-122.0308,36.9741,1],["Mill Valley",-122.545,37.906,2],["Half Moon Bay",-122.4286,37.4636,2],
+ ["Palo Alto",-122.143,37.4419,2],["Woodside",-122.2536,37.4297,2],["Saratoga",-122.0231,37.2638,2],
+ ["Los Gatos",-121.9747,37.2358,2],["Felton",-122.0733,37.0513,2],["Boulder Creek",-122.1222,37.1261,2],
+ ["Berkeley",-122.2727,37.8715,2],["San Rafael",-122.5311,37.9735,2],
+ ["Los Angeles",-118.2437,34.0522,1],["Long Beach",-118.1937,33.7701,1],["Santa Monica",-118.4912,34.0195,2],
+ ["Malibu",-118.7798,34.0259,2],["Pasadena",-118.1445,34.1478,1],["Van Nuys",-118.4489,34.1867,2],
+ ["Santa Clarita",-118.5426,34.3917,2],["Ventura",-119.2945,34.2746,1],["Ojai",-119.2429,34.4480,2],
+ ["Santa Barbara",-119.6982,34.4208,2],["Anaheim",-117.9143,33.8366,1],["Irvine",-117.7947,33.6846,2],
+ ["Santa Ana",-117.8677,33.7455,2],["San Clemente",-117.6120,33.4270,2],["Riverside",-117.3962,33.9533,1],
+ ["San Bernardino",-117.2898,34.1083,2],["Wrightwood",-117.6334,34.3608,2],["Mt Baldy",-117.6598,34.2369,2],
+ ["Lake Arrowhead",-117.1859,34.2514,2],["Big Bear Lake",-116.9114,34.2439,2],["Idyllwild",-116.7170,33.7405,2],
+ ["Palm Springs",-116.5453,33.8303,2]
+];
+const COVER={type:'FeatureCollection',features:[
+  {type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[[[-123.10,36.85],[-121.20,36.85],[-121.20,38.70],[-123.10,38.70],[-123.10,36.85]]]}},
+  {type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[[[-119.85,33.30],[-116.40,33.30],[-116.40,34.95],[-119.85,34.95],[-119.85,33.30]]]}}
+]};
+const BAY_BB=[[-123.15,36.88],[-121.45,38.45]];
+const SOCAL_BB=[[-119.9,33.25],[-116.4,34.95]];
+const ALL_BB=[[-123.6,32.9],[-116.0,38.9]];
+
+const PAL={
+ light:{ocean:'#d3e0e2',land:'#eceadf',line:'#c9c6b6',mixed:'#bccfa4',conifer:'#7fa87b',redwood:'#3f7259',
+        dot:'#c0392f',ring:'#f3f1e8',hot:'#8e2a22',stip:'rgba(35,42,34,.22)'},
+ dark:{ ocean:'#101c21',land:'#171b14',line:'#39402f',mixed:'#2c3a26',conifer:'#476b44',redwood:'#2e6b52',
+        dot:'#ff6a52',ring:'#121611',hot:'#ffb199',stip:'rgba(231,228,212,.18)'}
+};
+function isDark(){
+  const t=document.documentElement.getAttribute('data-theme');
+  if(t==='dark')return true; if(t==='light')return false;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
+/* venues -> geojson */
+VEN.forEach((v,i)=>{v._id=i});
+const venGJ={type:'FeatureCollection',features:VEN.map(v=>({type:'Feature',id:v._id,
+  properties:{id:v._id,planted:v.planted?1:0,region:v.region},geometry:{type:'Point',coordinates:[v.lon,v.lat]}}))};
+
+function stipple(color){
+  const s=28,c=document.createElement('canvas');c.width=s;c.height=s;
+  const x=c.getContext('2d');x.clearRect(0,0,s,s);x.strokeStyle=color;x.lineWidth=1.1;x.lineJoin='round';
+  const tree=(cx,cy)=>{x.beginPath();x.moveTo(cx,cy-3.4);x.lineTo(cx+2.6,cy+2.4);x.lineTo(cx-2.6,cy+2.4);x.closePath();x.stroke();x.beginPath();x.moveTo(cx,cy+2.4);x.lineTo(cx,cy+4);x.stroke();};
+  tree(7,8);tree(21,20);
+  return x.getImageData(0,0,s,s);
+}
+
+function buildStyle(){
+  const p=isDark()?PAL.dark:PAL.light;
+  return {
+    version:8,
+    sources:{
+      land:{type:'geojson',data:LAND},
+      cover:{type:'geojson',data:COVER},
+      counties:{type:'geojson',data:COUNTIES},
+      cbay:{type:'geojson',data:CBAY},
+      csocal:{type:'geojson',data:CSOCAL},
+      venues:{type:'geojson',data:venGJ,promoteId:'id'}
+    },
+    layers:[
+      {id:'bg',type:'background',paint:{'background-color':p.ocean}},
+      {id:'land',type:'fill',source:'land',paint:{'fill-color':p.land}},
+      ...[['cbay'],['csocal']].flatMap(([src])=>[
+        {id:src+'-mixed',type:'fill',source:src,filter:['==',['get','c'],1],paint:{'fill-color':p.mixed,'fill-opacity':0.9}},
+        {id:src+'-conifer',type:'fill',source:src,filter:['==',['get','c'],2],paint:{'fill-color':p.conifer,'fill-opacity':0.9}},
+        {id:src+'-redwood',type:'fill',source:src,filter:['==',['get','c'],3],paint:{'fill-color':p.redwood,'fill-opacity':0.92}},
+        {id:src+'-stip',type:'fill',source:src,minzoom:8.5,paint:{'fill-pattern':'stipple','fill-opacity':['interpolate',['linear'],['zoom'],8.5,0,9.5,0.75]}}
+      ]),
+      {id:'cover-line',type:'line',source:'cover',paint:{'line-color':p.line,'line-width':1,'line-dasharray':[2,2]}},
+      {id:'county-line',type:'line',source:'counties',paint:{'line-color':p.line,'line-width':['interpolate',['linear'],['zoom'],6,.6,11,1.4],'line-dasharray':[5,2,1.2,2]}},
+      {id:'v-halo',type:'circle',source:'venues',paint:{
+        'circle-radius':['case',['boolean',['feature-state','hover'],false],13,9],
+        'circle-color':p.dot,'circle-opacity':0.22,'circle-blur':0.15}},
+      {id:'v-dot',type:'circle',source:'venues',paint:{
+        'circle-radius':['case',['boolean',['feature-state','hover'],false],7,5.5],
+        'circle-color':['case',['==',['get','planted'],1],'rgba(0,0,0,0)',p.dot],
+        'circle-stroke-color':['case',['boolean',['feature-state','hover'],false],p.hot,p.dot],
+        'circle-stroke-width':['case',['==',['get','planted'],1],2.6,1.6],
+        'circle-pitch-alignment':'map'}},
+      {id:'v-ring',type:'circle',source:'venues',filter:['==',['get','planted'],0],paint:{
+        'circle-radius':['case',['boolean',['feature-state','hover'],false],7,5.5],
+        'circle-color':'rgba(0,0,0,0)','circle-stroke-color':p.ring,'circle-stroke-width':1.2}}
+    ]
+  };
+}
+
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const map=new maplibregl.Map({container:'map',style:buildStyle(),bounds:ALL_BB,fitBoundsOptions:{padding:30},
+  maxBounds:[[-127.5,30.8],[-112,41.8]],attributionControl:false,dragRotate:false,pitchWithRotate:false});
+map.touchZoomRotate.disableRotation();
+map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
+map.addControl(new maplibregl.FullscreenControl(),'top-right');
+map.addControl(new maplibregl.ScaleControl({maxWidth:120,unit:'imperial'}),'bottom-left');
+map.addControl(new maplibregl.AttributionControl({compact:true,customAttribution:'Canopy: <a href="https://landfire.gov" target="_blank" rel="noopener">LANDFIRE LF2025 EVT</a> (USGS/USFS) · Boundaries: US Census'}),'bottom-right');
+
+function addPatterns(){
+  const p=isDark()?PAL.dark:PAL.light;
+  if(map.hasImage('stipple'))map.removeImage('stipple');
+  map.addImage('stipple',stipple(p.stip));
+}
+map.on('styleimagemissing',e=>{if(e.id==='stipple')addPatterns()});
+map.on('load',addPatterns);
+
+/* theme switching */
+function retheme(){
+  addPatterns();
+  const p=isDark()?PAL.dark:PAL.light;
+  map.setPaintProperty('bg','background-color',p.ocean);
+  map.setPaintProperty('land','fill-color',p.land);
+  for(const src of['cbay','csocal']){
+    map.setPaintProperty(src+'-mixed','fill-color',p.mixed);
+    map.setPaintProperty(src+'-conifer','fill-color',p.conifer);
+    map.setPaintProperty(src+'-redwood','fill-color',p.redwood);
+  }
+  map.setPaintProperty('county-line','line-color',p.line);
+  map.setPaintProperty('cover-line','line-color',p.line);
+  map.setPaintProperty('v-halo','circle-color',p.dot);
+  map.setPaintProperty('v-dot','circle-color',['case',['==',['get','planted'],1],'rgba(0,0,0,0)',p.dot]);
+  map.setPaintProperty('v-dot','circle-stroke-color',['case',['boolean',['feature-state','hover'],false],p.hot,p.dot]);
+  map.setPaintProperty('v-ring','circle-stroke-color',p.ring);
+}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>map.loaded()&&retheme());
+new MutationObserver(()=>retheme()).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+
+/* city labels as HTML markers */
+const cityMarkers=CITIES.map(([name,lon,lat,tier])=>{
+  const el=document.createElement('div');el.className='citylab'+(tier>1?' min':'');el.textContent=name;
+  const m=new maplibregl.Marker({element:el,anchor:'center'}).setLngLat([lon,lat]);
+  m._tier=tier;return m;
+});
+function syncCities(){
+  const z=map.getZoom();
+  cityMarkers.forEach(m=>{
+    const show=m._tier===1?z>=6:z>=8.2;
+    if(show&&!m._on){m.addTo(map);m._on=true}
+    else if(!show&&m._on){m.remove();m._on=false}
+  });
+}
+map.on('zoom',syncCities);map.on('load',syncCities);
+map.on('load',()=>{document.querySelectorAll('.maplibregl-ctrl-attrib.maplibregl-compact').forEach(e=>e.classList.remove('maplibregl-compact-show'))});
+
+/* ---------- UI state ---------- */
+const activeRegions=new Set();
+let q='';
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+const regionsPresent=REGIONS.filter(r=>VEN.some(v=>v.region===r));
+const chipsEl=$('#chips');
+regionsPresent.forEach(r=>{
+  const b=document.createElement('button');b.type='button';b.className='chip';
+  const n=VEN.filter(v=>v.region===r).length;
+  b.innerHTML=esc(r.replace(' (bonus)',''))+' <span class="n">'+n+'</span>'+(r.includes('bonus')?' <span class="n" title="outside the asked-for regions, but this is the conifer country">★</span>':'');
+  b.onclick=()=>{b.classList.toggle('on');b.classList.contains('on')?activeRegions.add(r):activeRegions.delete(r);apply();};
+  chipsEl.appendChild(b);
+});
+$('#search').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();apply();});
+
+function visible(v){
+  if(activeRegions.size&&!activeRegions.has(v.region))return false;
+  if(q&&!((v.name+' '+v.town+' '+v.canopy).toLowerCase().includes(q)))return false;
+  return true;
+}
+let mapLoaded=false;
+map.on('load',()=>{mapLoaded=true;apply();});
+function apply(){
+  renderList();
+  if(!mapLoaded)return;
+  const ids=VEN.filter(visible).map(v=>v._id);
+  map.setFilter('v-halo',['in',['get','id'],['literal',ids]]);
+  map.setFilter('v-dot',['in',['get','id'],['literal',ids]]);
+  map.setFilter('v-ring',['all',['==',['get','planted'],0],['in',['get','id'],['literal',ids]]]);
+}
+$('#ntotal').textContent=VEN.length;
+
+const listEl=$('#list');
+function renderList(){
+  const groups=new Map();
+  VEN.filter(visible).forEach(v=>{(groups.get(v.region)??groups.set(v.region,[]).get(v.region)).push(v)});
+  let html='';let n=0;
+  for(const r of REGIONS){
+    const g=groups.get(r);if(!g)continue;
+    g.sort((a,b)=>a.name.localeCompare(b.name));n+=g.length;
+    html+='<div class="rgroup"><div class="rhead">'+esc(r)+' · '+g.length+'</div>';
+    for(const v of g){
+      html+='<button type="button" class="vrow" data-id="'+v._id+'"><span class="vn">'+esc(v.name)+'</span><br><span class="vt">'+esc(v.town)+'</span><br><span class="vc'+(v.planted?' planted':'')+'">'+esc(v.canopy)+'</span></button>';
+    }
+    html+='</div>';
+  }
+  listEl.innerHTML=html||'<div style="padding:18px;color:var(--ink-soft)">No venues match.</div>';
+  $('#nshown').textContent=n;
+}
+listEl.addEventListener('click',e=>{
+  const b=e.target.closest('.vrow');if(!b)return;
+  const v=VEN[+b.dataset.id];
+  focusVenue(v,true);
+  if(window.innerWidth<=760)listEl.classList.remove('open');
+});
+
+/* popup */
+let popup=null,selId=null;
+function linkRow(v){
+  const L=[];const a=(u,t,alt)=>u&&L.push('<a class="'+(alt?'alt':'')+'" href="'+esc(u)+'" target="_blank" rel="noopener">'+t+'</a>');
+  a(v.links.official,'Website');
+  a(v.links.hctg,'Here Comes The Guide',1);
+  a(v.links.theknot,'The Knot',1);
+  a(v.links.weddingwire,'WeddingWire',1);
+  a(v.links.other,'More',1);
+  a('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(v.name+' '+(v.address||v.town)),'Google Maps ↗',1);
+  return L.join('');
+}
+function focusVenue(v,fly){
+  if(fly){
+    const z=Math.max(map.getZoom(),11.3);
+    reduceMotion?map.jumpTo({center:[v.lon,v.lat],zoom:z}):map.flyTo({center:[v.lon,v.lat],zoom:z,speed:1.6,essential:true});
+  }
+  if(popup)popup.remove();
+  popup=new maplibregl.Popup({offset:14,maxWidth:'320px'})
+    .setLngLat([v.lon,v.lat])
+    .setHTML('<div class="pp"><h2>'+esc(v.name)+'</h2><div class="where">'+esc(v.town)+' · '+esc(v.region.replace(' (bonus)',''))+'</div>'+
+      '<span class="canopy'+(v.planted?' planted':'')+'">'+esc(v.canopy)+(v.planted?' · planted':'')+'</span>'+
+      '<div class="set">'+esc(v.setting)+'</div>'+
+      (v.capacity?'<div class="where">Capacity: '+esc(v.capacity)+'</div>':'')+
+      '<div class="links">'+linkRow(v)+'</div>'+
+      (v.address?'<div class="addr">'+esc(v.address)+'</div>':'')+
+      '</div>')
+    .addTo(map);
+  document.querySelectorAll('.vrow.sel').forEach(x=>x.classList.remove('sel'));
+  const row=listEl.querySelector('.vrow[data-id="'+v._id+'"]');
+  if(row){row.classList.add('sel');if(window.innerWidth>760)row.scrollIntoView({block:'nearest'})}
+  selId=v._id;
+}
+map.on('click','v-dot',e=>{const f=e.features[0];focusVenue(VEN[f.properties.id],false)});
+map.on('click','v-halo',e=>{const f=e.features[0];focusVenue(VEN[f.properties.id],false)});
+let hoverId=null;
+map.on('mousemove','v-halo',e=>{
+  map.getCanvas().style.cursor='pointer';
+  const id=e.features[0].id;
+  if(hoverId!==null&&hoverId!==id)map.setFeatureState({source:'venues',id:hoverId},{hover:false});
+  hoverId=id;map.setFeatureState({source:'venues',id},{hover:true});
+});
+map.on('mouseleave','v-halo',()=>{
+  map.getCanvas().style.cursor='';
+  if(hoverId!==null)map.setFeatureState({source:'venues',id:hoverId},{hover:false});
+  hoverId=null;
+});
+
+/* jumps, sheet, legend */
+const fit=(bb)=>reduceMotion?map.fitBounds(bb,{padding:40,duration:0}):map.fitBounds(bb,{padding:40});
+$('#jumpBay').onclick=()=>fit(BAY_BB);
+$('#jumpSocal').onclick=()=>fit(SOCAL_BB);
+$('#sheetbtn').onclick=()=>listEl.classList.toggle('open');
+if(window.matchMedia('(max-width:760px)').matches){$('#legend').classList.add('collapsed');$('#lgtoggle').textContent='+';}
+$('#lgtoggle').onclick=()=>{const L=$('#legend');L.classList.toggle('collapsed');$('#lgtoggle').textContent=L.classList.contains('collapsed')?'+':'–'};
+
+map.on('error',e=>{console.error('maperr',e&&e.error&&e.error.message||e)});
+map.once('idle',()=>{window.__MAP_IDLE=true});
+window.__muc={map,VEN,focusVenue};
+apply();
+try{const saved=localStorage.getItem('muc-view');if(saved==='bay')fit(BAY_BB);else if(saved==='socal')fit(SOCAL_BB);}catch(e){}
+$('#jumpBay').addEventListener('click',()=>{try{localStorage.setItem('muc-view','bay')}catch(e){}});
+$('#jumpSocal').addEventListener('click',()=>{try{localStorage.setItem('muc-view','socal')}catch(e){}});
+</script>
